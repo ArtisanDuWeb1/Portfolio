@@ -1,0 +1,187 @@
+<template>
+  <div id="app" class="dark z-0" :class="{'h' : modal}">
+    <NavBar :nav="smallNav" />
+    <ProjectModal v-show="modal"/>
+    <Slider/>
+    <component :is="currentTab"></component>
+    <Footer/>
+  </div>
+</template>
+
+<script>
+
+import NavBar from './components/NavBar.vue'
+import Slider from './components/Slider.vue'
+import Services from './components/Services.vue'
+import Competences from './components/Compétences.vue'
+import Portfolio from './components/Portfolio.vue'
+import ProjectModal from './components/ProjectModal.vue'
+import Tarifs from './components/Tarifs.vue'
+import Contact from './components/Contact.vue'
+import Footer from './components/Footer.vue'
+import About from './components/About.vue'
+
+export default {
+  name: 'App',
+  components: {
+    NavBar,
+    Slider,
+    Services,
+    Competences,
+    Portfolio,
+    ProjectModal,
+    Tarifs,
+    Contact,
+    Footer,
+    About
+  },
+  data() {
+      return {
+        menu:["about","slider","services","competences", "portfolio","tarifs","contact"],
+        currentTab:'home',
+        modal:false,         
+      }
+  },
+  computed:{
+  },
+  methods: {
+    swapToComponent(component){
+      if(component != this.currentTab){
+        window.scroll({
+          top: 0,
+        });
+        animateCSS('#header-text', 'fadeOut').then((message) => {
+        if(message == "Animation ended"){
+          this.currentTab = component;
+          document.getElementsByClassName('header-animated').classList.add('animate__animated');
+        }
+      })
+      }
+    },
+    toggleModal (){
+      const scrollY= window.scrollY;
+      if(this.modal){
+        animateCSS('#modal', 'slideOutRight').then((message) => {
+          if(message == "Animation ended"){
+            const topY = document.body.style.top;
+            this.modal = !this.modal
+            document.body.style.position = ""
+            document.body.style.top = "";
+            document.body.style.paddingRight = "0px";
+            window.scrollTo(0, parseInt(topY || '0') * -1)
+          }
+      })
+      }else{
+        this.modal = !this.modal
+        animateCSS('#modal', 'slideInRight');
+        document.body.style.position = "fixed";
+        document.body.style.top = "-" +  scrollY + "px";
+        document.body.style.paddingRight = "15px";  
+      }
+    },
+    handleScroll(){
+  
+    },
+
+    scrollTo(id){
+      const el = document.getElementById(id).offsetTop -120;
+      window.scroll({
+        top: el,
+        behavior: "smooth"
+      })
+    }
+  }
+}
+
+const animateCSS = (element, animation, prefix = 'animate__') =>
+  new Promise((resolve) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.querySelector(element);
+
+    node.classList.add(`${prefix}animated`, animationName);
+
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      node.classList.remove(`${prefix}animated`, animationName);
+      resolve('Animation ended');
+    }
+    node.addEventListener('animationend', handleAnimationEnd, {once: true});
+  });
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Khand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400&family=Staatliches&display=swap');
+
+#app {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight:100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+.light{
+    background-color:#99a1a6;
+}
+.text-light{
+    color:#99a1a6;
+}
+.secondary{
+  background-color: #7cb342;
+}
+.text-secondary{
+  color: #7cb342;
+}
+.border-secondary{
+  border-color:#7cb342 ;
+}
+.dark{
+    background-color:#1b1d1f;
+}
+.darker{
+    background-color: #0f1011;
+}
+.darkest{
+    background-color:#0a0a0b;
+}
+.text-dark{
+    color:#1b1d1f;
+}
+.text-darker{
+    color:#0f1011;
+}
+.text-darkest{
+    color:#0a0a0b;
+}
+.weight-light{
+  font-weight:300;
+}
+.weight-regular{
+  font-weight:400;
+}
+.gradient-radial{
+  background:linear-gradient(180deg, rgba(34,193,195,0) 70%, rgb(255, 255, 255) 100%);
+}
+.shizuru{
+  font-family: 'Staatliches', cursive;
+}
+.text-shadow{
+  text-shadow: 1px 1px 2px black;
+}
+.condensed{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.bebas{
+font-family: 'Bebas Neue', cursive;
+}
+.decale{
+  margin-top:60px;
+  margin-bottom:-60px;
+}
+@media (max-width: 750px) {
+  .decale{
+    margin-top:0px;
+    margin-bottom:0px;
+  }
+}
+</style>
