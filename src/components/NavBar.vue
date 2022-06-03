@@ -10,13 +10,13 @@
                         </div>
                     </div>
                     <div class=" hidden md:flex text-gray-400 uppercase text-lg  justify-center font-semibold">
+                        <div @click="$parent.swapToComponent('home')" class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
+                            Accueil
+                            <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'services'}"></div>
+                        </div>
                         <div @click="$parent.swapToComponent('about')"  class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
                             à propos
                             <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'about'}"></div>
-                        </div>
-                        <div @click="$parent.swapToComponent('services')" class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
-                            Services
-                            <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'services'}"></div>
                         </div>
                         <div @click="$parent.swapToComponent('competences')" class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
                             Compétences
@@ -26,7 +26,7 @@
                             Portfolio
                             <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'portfolio'}"></div>
                         </div>
-                        <div @click="$parent.scrollTo('contact')" class="pl-4 pr-0 xl:pr-4 group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
+                        <div @click="$parent.swapToComponent('contact')" class="pl-4 pr-0 xl:pr-4 group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
                             Contact
                             <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-70 text-transparent" :class="{'w-5' : $parent.currentTab == 'contact'}"></div>
                         </div>

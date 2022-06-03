@@ -53,7 +53,7 @@ export default {
         animateCSS('#header-text', 'fadeOut').then((message) => {
         if(message == "Animation ended"){
           this.currentTab = component;
-          document.getElementsByClassName('header-animated').classList.add('animate__animated');
+          document.getElementsByClassName('header-animated').forEach(element => element.classList.add('animate__animated'));
         }
       })
       }

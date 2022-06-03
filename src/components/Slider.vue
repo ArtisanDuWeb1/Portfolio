@@ -27,9 +27,7 @@
             </kinesis-element>
             <kinesis-element :strength="14" originX="50"  class="relative flex w-full justify-center h-full items-center z-20" type="translate">
                 <div class=" mx-auto  px-8">
-                    <h1 class="typing text-4xl lg:text-5xl xl:text-6xl text-white text-shadow text-left md:text-center  animate__animated animate__fadeInUp animate__delay-5s">
-                        <span class='font-semibold'>Création de site </span> vitrine, E-commerce,<br> corporate <span class="text-secondary font-bold">&</span> évenementiel
-                    </h1>
+                    <h1 v-html="subtitles[getTabIndex]" class="typing text-4xl lg:text-5xl xl:text-6xl text-white text-shadow text-left md:text-center animate__fadeInUp animate__delay-5s"></h1>
                 </div>
                 
             </kinesis-element>
@@ -37,22 +35,21 @@
                 <div class="-rotate-90 md:rotate-0">
                     <div class="relative text-left -ml-16 animate__animated animate__backInLeft header-animated">
                         <div class="absolute darkest  text-transparent  animate__animated animate__lightSpeedOutLeft animate__delay-3s header-animated">
-                            sites
+                            {{ titles1[getTabIndex] }}
                         </div>   
-                        sites
+                        {{ titles1[getTabIndex] }}
                     </div>
               
                     <div class="relative text-right mr-0 md:-mr-12 mt-0 md:-mt-3 animate__animated animate__backInRight animate__delay-2s header-animated">
                         <div class="absolute darker  animate__animated animate__lightSpeedOutLeft animate__delay-4s animate__fast text-transparent header-animated">
-                            internet
+                            {{ titles2[getTabIndex] }}
                         </div>   
-                        internet
+                        {{ titles2[getTabIndex] }}
                     </div>
                 </div>
             </kinesis-element>
             
         </kinesis-container>
-        
     </div>
 </template>
 
@@ -61,7 +58,47 @@ export default {
     name:'Slider',
     props:[],
     data(){
-
+        return {
+            titles1:[
+                `Sites`,
+                `à propos`,
+                `compétences`,
+                `portfolio`,
+                `contact`,
+            ],
+            titles2:[
+                `Internet`,
+                ``,
+                ``,
+                ``,
+                ``,
+            ],
+            subtitles:[
+                `<span class='font-semibold'>Création de site </span> vitrine, E-commerce,<br> corporate <span class="text-secondary font-bold">&</span> évenementiel`,
+                ``,
+                ``,
+                ``,
+                ``,
+                ``,
+            ],
+        }
+    },
+    computed:{
+        getTabIndex(){
+            if(this.$parent.currentTab=="home"){
+                return 0;
+            } else if(this.$parent.currentTab=="about"){
+                return 1;
+            } else if(this.$parent.currentTab=="competences"){
+                return 2;
+            } else if(this.$parent.currentTab=="portfolio"){
+                return 3;
+            } else if(this.$parent.currentTab=="contact"){
+                return 4;
+            } else{
+                return 5;
+            }
+        }
     }
 }
 </script>
