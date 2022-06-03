@@ -1,7 +1,7 @@
 <template>
     <nav id="navbar" class="w-full z-50 top-0 animate__animated animate__fadeInDownBig animate__delay-5s absolute">
         <div class="w-full">
-            <div :class="{'darker border-b border-gray-800' : smallNav, 'pr-4' : $parent.modal }">
+            <div :class="{'pr-4' : $parent.modal }">
                 <div class="w-full mx-auto flex justify-between p-3 px-4 lg:px-8 xl:px-12 ">
                     <div @click="$parent.scrollTo('slider')" class="flex py-3 cursor-pointer ">
                         <img alt="logo" class="w-12 sm:w-12 md:w-16  h-auto" src="../assets/logoAW.png">

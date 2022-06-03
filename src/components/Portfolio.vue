@@ -1,78 +1,67 @@
 <template>
-    <div id="portfolio" class="w-full flex flex-wrap relative justify-center">
+    <div id="portfolio" class="w-full flex flex-wrap relative justify-center mt-">
         <div class="absolute w-[2px] h-[150px] secondary -mt-10 z-20"></div>
         <div class="absolute bottom-0 w-[2px] h-[150px] secondary -mb-[100px] z-20"></div>
-        <div class="w-full md:w-1/2 bg-gray-300 pb-16">
-            <div class="px-8 md:px-12 lg:px-[60px] xl:px-[80px] pt-8 md:pt-12 lg:pt-[80px]">
-              <Titre title="Portfolio" subtitle="Une partie des projets sur lesquels j'ai travaillé" :dark="true" align="left" class=" mt-5"/>
+        <div class="w-full md:w-1/2 bg-gray-200 px-8 pb-16">
+            <div class="px-8 h-72 flex items-center">
+              <Titre title="Les projets" :titleClass="'text-gray-400'" :dark="true" align="left" class="ml-12 mt-7"/>
             </div>
-           
-        </div>
-        <div class="w-full md:w-1/2 mx-auto pb-16 bg-gray-300 mt-12 pt-0 md:pt-10">
-            
-        </div>
-        <div class="w-full bg-gray-300 px-8 md:px-12 lg:px-[60px] xl:px-[80px] pb-24 relative">
-            <div class="">
-                <div class="flex flex-row ">
-                    <div class="w-[700px] mx-3">
-                        <kinesis-container  class=" group cursor-pointer opacity-100  transition-all easy-in relative">
-                            <div @click="$parent.toggleModal" class="absolute left-0 right-0 bottom-0 top-0 z-30"></div>
-                            <div class="absolute flex z-30 right-0  mt-12 md:mt-16  items-center mr-10 ">
-                                    <div class="h-[4px] w-[30px] lg:w-0 secondary rounded-full transition-all easy-in group-hover:w-[30px] "></div>
-                                    <div class="text-gray-300 font-bold text-xl opacity-100 lg:opacity-0 transition-all easy-in-out group-hover:opacity-100 duration-900 ml-2">Voir le projet</div>
-                            </div>
-                            <kinesis-element  :strength="10"  type="depth" class="bg-gray-400 mx-auto transition-all ease-in-out duration-600 rounded-t-xl w-full flex relative justify-start items-end relative p-4">
-                                <div class="relative z-10">
-                                    <img src="../assets/capture-portfolio.png" alt="" class="w-full z-0">
-                                </div>
-                            </kinesis-element>
-                            <div class=" uppercase text-3xl font-bold text-dark text-left z-30 font-bold mt-5 text-center">
-                                l'Artisan du Web
-                                <div class="h-[4px] md:h-[8px] w-[150px] lg:w-0 secondary rounded-full transition-all easy-in group-hover:w-[150px] mt-1 mx-auto"></div>
-                            </div>      
-                        </kinesis-container>
-                    </div>
-                    <div class="w-[700px] mx-3">
-                        <kinesis-container  class=" group cursor-pointer opacity-100  transition-all easy-in relative">
-                            <div @click="$parent.toggleModal" class="absolute left-0 right-0 bottom-0 top-0 z-30"></div>
-                            <div class="absolute flex z-30 right-0  mt-12 md:mt-16  items-center mr-10 ">
-                                    <div class="h-[4px] w-[30px] lg:w-0 secondary rounded-full transition-all easy-in group-hover:w-[30px] "></div>
-                                    <div class="text-gray-300 font-bold text-xl opacity-100 lg:opacity-0 transition-all easy-in-out group-hover:opacity-100 duration-900 ml-2">Voir le projet</div>
-                            </div>
-                            <kinesis-element  :strength="10"  type="depth" class="bg-gray-400 mx-auto transition-all ease-in-out duration-600 rounded-t-xl w-full flex relative justify-start items-end relative p-4">
-                                <div class="relative z-10">
-                                    <img src="../assets/capture-portfolio.png" alt="" class="w-full z-0">
-                                </div>
-                            </kinesis-element>
-                            <div class=" uppercase text-3xl font-bold text-dark text-left z-30 font-bold mt-5 text-center">
-                                l'Artisan du Web
-                                <div class="h-[4px] md:h-[8px] w-[150px] lg:w-0 secondary rounded-full transition-all easy-in group-hover:w-[150px] mt-1 mx-auto"></div>
-                            </div>      
-                        </kinesis-container>
-                    </div>
-                    <div class="w-[700px] mx-3">
-                        <kinesis-container  class=" group cursor-pointer opacity-100  transition-all easy-in relative">
-                            <div @click="$parent.toggleModal" class="absolute left-0 right-0 bottom-0 top-0 z-30"></div>
-                            <div class="absolute flex z-30 right-0  mt-12 md:mt-16  items-center mr-10 ">
-                                    <div class="h-[4px] w-[30px] lg:w-0 secondary rounded-full transition-all easy-in group-hover:w-[30px] "></div>
-                                    <div class="text-gray-300 font-bold text-xl opacity-100 lg:opacity-0 transition-all easy-in-out group-hover:opacity-100 duration-900 ml-2">Voir le projet</div>
-                            </div>
-                            <kinesis-element  :strength="10"  type="depth" class="bg-gray-400 mx-auto transition-all ease-in-out duration-600 rounded-t-xl w-full flex relative justify-start items-end relative p-4">
-                                <div class="relative z-10">
-                                    <img src="../assets/capture-portfolio.png" alt="" class="w-full z-0">
-                                </div>
-                            </kinesis-element>
-                            <div class=" uppercase text-3xl font-bold text-dark text-left z-30 font-bold mt-5 text-center">
-                                l'Artisan du Web
-                                <div class="h-[4px] md:h-[8px] w-[150px] lg:w-0 secondary rounded-full transition-all easy-in group-hover:w-[150px] mt-1 mx-auto"></div>
-                            </div>      
-                        </kinesis-container>
-                    </div>
+            <div @click="$parent.toggleModal" class="relative w-full group py-24 hover:bg-green-300 bg-gray-300 cursor-pointer transition-all easy-in-out duration-900 mb-36">
+                <div class="rounded-t-lg bg-gray-400 group-hover:bg-green-400 p-5 w-8/12 mx-auto transition-all easy-in-out duration-900">
+                    <img src="../assets/capture-portfolio.png" alt="" class=" z-0"/>
                 </div>
+                <div class="rounded-b-lg w-9/12 h-6 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900"></div>
+                 <div class="absolute font-bold text-[2.5rem] bottom-0  text-gray-500 text-left z-30 ml-12 -mb-14">
+                    l'Artisan du Web
+                    <div class="text-2xl flex -mt-2 font-thin">
+                        <span class="mr-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 19H4C2.9 19 2 18.1 2 17H22C22 18.1 21.1 19 20 19Z" fill="#5a832f"/>
+                                <path opacity="0.3" d="M20 5H4C3.4 5 3 5.4 3 6V17H21V6C21 5.4 20.6 5 20 5Z" fill="#7cb342"/>
+                            </svg>
+                        </span>Site web
+                    </div>
+                </div>      
+            </div>
+            <div @click="$parent.toggleModal" class="relative w-full group py-24 hover:bg-green-300 bg-gray-300 cursor-pointer transition-all easy-in-out duration-900">
+                <div class="rounded-t-lg bg-gray-400 group-hover:bg-green-400 p-5 w-8/12 mx-auto transition-all easy-in-out duration-900">
+                    <img src="../assets/capture-portfolio.png" alt="" class=" z-0"/>
+                </div>
+                <div class="rounded-b-lg w-9/12 h-6 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900"></div>
+                 <div class="absolute font-bold text-[2.5rem] bottom-0  text-gray-500 text-left z-30 ml-12 -mb-14">
+                    l'Artisan du Web
+                    <div class="text-2xl flex -mt-2 font-thin">
+                        <span class="mr-2 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 19H4C2.9 19 2 18.1 2 17H22C22 18.1 21.1 19 20 19Z" fill="#5a832f"/>
+                                <path opacity="0.3" d="M20 5H4C3.4 5 3 5.4 3 6V17H21V6C21 5.4 20.6 5 20 5Z" fill="#7cb342"/>
+                            </svg>
+                        </span>Site web
+                    </div>
+                </div>      
             </div>
         </div>
-    </div>
-    
+        <div class="w-full md:w-1/2  pb-20 bg-gray-200 mt-20 px-8">
+            <div class="px-8 h-72 flex items-center"></div>
+            <div @click="$parent.toggleModal" class="relative w-full group py-24 hover:bg-red-300 bg-gray-300 mt-5 cursor-pointer transition-all easy-in-out duration-900">
+                <div class="rounded-t-lg bg-gray-400 group-hover:bg-red-400 p-5 w-8/12 mx-auto transition-all easy-in-out duration-900">
+                    <img src="../assets/capture-portfolio.png" alt="" class=" z-0"/>
+                </div>
+                <div class="rounded-b-lg w-9/12 h-6 bg-gray-400 group-hover:bg-red-400 mt-1 mx-auto transition-all easy-in-out duration-900"></div>
+                <div class="absolute font-bold text-[2.5rem] bottom-0  text-gray-500 text-left z-30 ml-12 -mb-14">
+                    l'Artisan du Web
+                    <div class="text-2xl flex -mt-2 font-thin">
+                        <span class="mr-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 19H4C2.9 19 2 18.1 2 17H22C22 18.1 21.1 19 20 19Z" fill="#5a832f"/>
+                                <path opacity="0.3" d="M20 5H4C3.4 5 3 5.4 3 6V17H21V6C21 5.4 20.6 5 20 5Z" fill="#7cb342"/>
+                            </svg>
+                        </span>Site web
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div> 
 </template>
 
 <script>

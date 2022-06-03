@@ -27,21 +27,21 @@
             </kinesis-element>
             <kinesis-element :strength="14" originX="50"  class="relative flex w-full justify-center h-full items-center z-20" type="translate">
                 <div class=" mx-auto  px-8">
-                    <h1 v-html="subtitles[getTabIndex]" class="typing text-4xl lg:text-5xl xl:text-6xl text-white text-shadow text-left md:text-center animate__fadeInUp animate__delay-5s"></h1>
+                    <h1 id="header-subtitle" v-html="subtitles[getTabIndex]" class="opacity-0 text-4xl lg:text-5xl xl:text-6xl text-white text-shadow text-left md:text-center animate__delay-4s"></h1>
                 </div>
                 
             </kinesis-element>
-            <kinesis-element :strength="10"  class="bebas text-[12rem] lg:text-[14rem] xl:text-[16rem] absolute font-bold leading-[12rem] lg:leading-[14rem] xl:leading-[16rem] z-10 text-darker my-auto header-animated" type="translate">
+            <kinesis-element :strength="10"  class="bebas text-[12rem] lg:text-[14rem] xl:text-[16rem] absolute font-bold leading-[12rem] lg:leading-[14rem] xl:leading-[16rem] z-10 text-darker my-auto" type="translate">
                 <div class="-rotate-90 md:rotate-0">
-                    <div class="relative text-left -ml-16 animate__animated animate__backInLeft header-animated">
-                        <div class="absolute darkest  text-transparent  animate__animated animate__lightSpeedOutLeft animate__delay-3s header-animated">
+                    <div id="header-title-1" class="relative text-left">
+                        <div id="header-cover-title-1"  class="absolute darkest  text-transparent opacity-100">
                             {{ titles1[getTabIndex] }}
                         </div>   
                         {{ titles1[getTabIndex] }}
                     </div>
               
-                    <div class="relative text-right mr-0 md:-mr-12 mt-0 md:-mt-3 animate__animated animate__backInRight animate__delay-2s header-animated">
-                        <div class="absolute darker  animate__animated animate__lightSpeedOutLeft animate__delay-4s animate__fast text-transparent header-animated">
+                    <div id="header-title-2" class="relative text-right mr-0 md:-mr-12 mt-0 md:-mt-3 animate__delay-2s">
+                        <div id="header-cover-title-2" class="absolute darker text-transparent opacity-100">
                             {{ titles2[getTabIndex] }}
                         </div>   
                         {{ titles2[getTabIndex] }}
@@ -56,25 +56,24 @@
 <script>
 export default {
     name:'Slider',
-    props:[],
     data(){
         return {
             titles1:[
-                `Sites`,
+                `Jules`,
                 `à propos`,
                 `compétences`,
                 `portfolio`,
                 `contact`,
             ],
             titles2:[
-                `Internet`,
+                `Tonolo`,
                 ``,
                 ``,
                 ``,
                 ``,
             ],
             subtitles:[
-                `<span class='font-semibold'>Création de site </span> vitrine, E-commerce,<br> corporate <span class="text-secondary font-bold">&</span> évenementiel`,
+                `Développeur <span class='font-semibold'>Web</span><br><span class="text-secondary font-bold">&</span> Web <span class='font-semibold'>Mobile</span>`,
                 ``,
                 ``,
                 ``,
@@ -99,6 +98,9 @@ export default {
                 return 5;
             }
         }
+    },
+    mounted(){
+        this.$parent.animateHeader();
     }
 }
 </script>

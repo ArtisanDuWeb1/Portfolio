@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="dark z-0" :class="{'h' : modal}">
-    <NavBar :nav="smallNav" />
+    <NavBar/>
     <ProjectModal v-show="modal"/>
     <Slider/>
     <component :is="currentTab"></component>
@@ -12,11 +12,9 @@
 
 import NavBar from './components/NavBar.vue'
 import Slider from './components/Slider.vue'
-import Services from './components/Services.vue'
 import Competences from './components/Compétences.vue'
 import Portfolio from './components/Portfolio.vue'
 import ProjectModal from './components/ProjectModal.vue'
-import Tarifs from './components/Tarifs.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import About from './components/About.vue'
@@ -26,40 +24,72 @@ export default {
   components: {
     NavBar,
     Slider,
-    Services,
     Competences,
     Portfolio,
     ProjectModal,
-    Tarifs,
     Contact,
     Footer,
     About
   },
   data() {
       return {
-        menu:["about","slider","services","competences", "portfolio","tarifs","contact"],
         currentTab:'home',
-        modal:false,         
+        modal:false,
+        mute:false,
       }
   },
   computed:{
   },
   methods: {
     swapToComponent(component){
-      if(component != this.currentTab){
+      if(component != this.currentTab && this.mute===false){
         window.scroll({
           top: 0,
         });
         animateCSS('#header-text', 'fadeOut').then((message) => {
-        if(message == "Animation ended"){
-          this.currentTab = component;
-          document.getElementsByClassName('header-animated').forEach(element => element.classList.add('animate__animated'));
-        }
-      })
+          if(message == "Animation ended"){
+            this.currentTab = component;
+            this.animateHeader();
+          }
+        })
       }
     },
+    animateHeader(){
+      this.mute=true;
+      document.getElementById('header-cover-title-1').style.opacity = 100;
+      document.getElementById('header-cover-title-2').style.opacity = 100;
+
+      animateCSS( '#header-title-1' , 'backInLeft').then((message) => {
+        if(message == "Animation ended"){
+          animateCSS('#header-cover-title-1','lightSpeedOutLeft').then((message) => {
+            if(message == "Animation ended"){
+              document.getElementById('header-cover-title-1').style.opacity = 0;
+              this.mute=false;
+            }
+          });
+        }
+      });
+
+      animateCSS('#header-title-2', 'backInRight').then((message) => {
+        if(message == "Animation ended"){
+          animateCSS('#header-cover-title-2','lightSpeedOutRight').then((message) => {
+            if(message == "Animation ended"){
+              document.getElementById('header-cover-title-2').style.opacity = 0;
+            }
+          });
+        }
+      });
+      animateCSS('#header-subtitle','fadeInUp').then((message) => {
+        if(message == "Animation ended"){
+          document.getElementById('header-subtitle').style.opacity = 100;
+          
+        }
+      });
+    },
     toggleModal (){
+
       const scrollY= window.scrollY;
+
       if(this.modal){
         animateCSS('#modal', 'slideOutRight').then((message) => {
           if(message == "Animation ended"){
@@ -70,7 +100,7 @@ export default {
             document.body.style.paddingRight = "0px";
             window.scrollTo(0, parseInt(topY || '0') * -1)
           }
-      })
+        })
       }else{
         this.modal = !this.modal
         animateCSS('#modal', 'slideInRight');
@@ -79,10 +109,6 @@ export default {
         document.body.style.paddingRight = "15px";  
       }
     },
-    handleScroll(){
-  
-    },
-
     scrollTo(id){
       const el = document.getElementById(id).offsetTop -120;
       window.scroll({
@@ -127,7 +153,7 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
     color:#99a1a6;
 }
 .secondary{
-  background-color: #7cb342;
+  background-color: #5a832f;
 }
 .text-secondary{
   color: #7cb342;
