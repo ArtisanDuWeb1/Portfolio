@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="dark z-0" :class="{'h' : modal}">
     <NavBar/>
-    <ProjectModal v-show="modal"/>
+    
     <Slider/>
     <component :is="currentTab"></component>
     <Footer/>
@@ -14,7 +14,6 @@ import NavBar from './components/NavBar.vue'
 import Slider from './components/Slider.vue'
 import Competences from './components/Compétences.vue'
 import Portfolio from './components/Portfolio.vue'
-import ProjectModal from './components/ProjectModal.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 import About from './components/About.vue'
@@ -26,7 +25,6 @@ export default {
     Slider,
     Competences,
     Portfolio,
-    ProjectModal,
     Contact,
     Footer,
     About
@@ -41,12 +39,27 @@ export default {
   computed:{
   },
   methods: {
+    animateCSS(element, animation, prefix = 'animate__'){
+      return new Promise((resolve) => {
+      const animationName = `${prefix}${animation}`;
+      const node = document.querySelector(element);
+
+      node.classList.add(`${prefix}animated`, animationName);
+
+      function handleAnimationEnd(event) {
+        event.stopPropagation();
+        node.classList.remove(`${prefix}animated`, animationName);
+        resolve('Animation ended');
+      }
+      node.addEventListener('animationend', handleAnimationEnd, {once: true});
+      })
+    },
     swapToComponent(component){
       if(component != this.currentTab && this.mute===false){
         window.scroll({
           top: 0,
         });
-        animateCSS('#header-text', 'fadeOut').then((message) => {
+        this.animateCSS('#header-text', 'fadeOut').then((message) => {
           if(message == "Animation ended"){
             this.currentTab = component;
             this.animateHeader();
@@ -59,9 +72,9 @@ export default {
       document.getElementById('header-cover-title-1').style.opacity = 100;
       document.getElementById('header-cover-title-2').style.opacity = 100;
 
-      animateCSS( '#header-title-1' , 'backInLeft').then((message) => {
+      this.animateCSS( '#header-title-1' , 'backInLeft').then((message) => {
         if(message == "Animation ended"){
-          animateCSS('#header-cover-title-1','lightSpeedOutLeft').then((message) => {
+          this.animateCSS('#header-cover-title-1','lightSpeedOutLeft').then((message) => {
             if(message == "Animation ended"){
               document.getElementById('header-cover-title-1').style.opacity = 0;
               this.mute=false;
@@ -70,45 +83,23 @@ export default {
         }
       });
 
-      animateCSS('#header-title-2', 'backInRight').then((message) => {
+      this.animateCSS('#header-title-2', 'backInRight').then((message) => {
         if(message == "Animation ended"){
-          animateCSS('#header-cover-title-2','lightSpeedOutRight').then((message) => {
+          this.animateCSS('#header-cover-title-2','lightSpeedOutRight').then((message) => {
             if(message == "Animation ended"){
               document.getElementById('header-cover-title-2').style.opacity = 0;
             }
           });
         }
       });
-      animateCSS('#header-subtitle','fadeInUp').then((message) => {
+      this.animateCSS('#header-subtitle','fadeInUp').then((message) => {
         if(message == "Animation ended"){
           document.getElementById('header-subtitle').style.opacity = 100;
           
         }
       });
     },
-    toggleModal (){
 
-      const scrollY= window.scrollY;
-
-      if(this.modal){
-        animateCSS('#modal', 'slideOutRight').then((message) => {
-          if(message == "Animation ended"){
-            const topY = document.body.style.top;
-            this.modal = !this.modal
-            document.body.style.position = ""
-            document.body.style.top = "";
-            document.body.style.paddingRight = "0px";
-            window.scrollTo(0, parseInt(topY || '0') * -1)
-          }
-        })
-      }else{
-        this.modal = !this.modal
-        animateCSS('#modal', 'slideInRight');
-        document.body.style.position = "fixed";
-        document.body.style.top = "-" +  scrollY + "px";
-        document.body.style.paddingRight = "15px";  
-      }
-    },
     scrollTo(id){
       const el = document.getElementById(id).offsetTop -120;
       window.scroll({
@@ -118,21 +109,6 @@ export default {
     }
   }
 }
-
-const animateCSS = (element, animation, prefix = 'animate__') =>
-  new Promise((resolve) => {
-    const animationName = `${prefix}${animation}`;
-    const node = document.querySelector(element);
-
-    node.classList.add(`${prefix}animated`, animationName);
-
-    function handleAnimationEnd(event) {
-      event.stopPropagation();
-      node.classList.remove(`${prefix}animated`, animationName);
-      resolve('Animation ended');
-    }
-    node.addEventListener('animationend', handleAnimationEnd, {once: true});
-  });
 </script>
 
 <style>
