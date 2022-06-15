@@ -10,20 +10,18 @@
 
 <script>
 
-import NavBar from './components/NavBar.vue'
-import Slider from './components/Slider.vue'
-import Competences from './components/Compétences.vue'
-import Portfolio from './components/Portfolio.vue'
-import Contact from './components/Contact.vue'
-import Footer from './components/Footer.vue'
-import About from './components/About.vue'
+import NavBar from './components/partials/NavBar.vue'
+import Slider from './components/modules/Slider.vue'
+import Portfolio from './components/pages/Portfolio.vue'
+import Contact from './components/pages/Contact.vue'
+import Footer from './components/partials/Footer.vue'
+import About from './components/pages/About.vue'
 
 export default {
   name: 'App',
   components: {
     NavBar,
     Slider,
-    Competences,
     Portfolio,
     Contact,
     Footer,
@@ -82,7 +80,6 @@ export default {
           });
         }
       });
-
       this.animateCSS('#header-title-2', 'backInRight').then((message) => {
         if(message == "Animation ended"){
           this.animateCSS('#header-cover-title-2','lightSpeedOutRight').then((message) => {

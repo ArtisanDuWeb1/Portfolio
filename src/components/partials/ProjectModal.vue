@@ -12,10 +12,10 @@
                     <h4 class="text-8xl md:text-9xl bebas text-darkest text-center mb-4">{{$parent.projets[$parent.indexModal].title}}</h4>
                 </div>
                  <div class="md:-mt-[180px] -mt-[130px] relative">
-                    <div class="rounded-t-lg bg-gray-400 p-5 w-8/12 md:w-6/12 mx-auto transition-all easy-in-out duration-900 darker ">
+                    <div class="rounded-t-lg bg-gray-400 p-5 w-8/12 md:w-6/12 mx-auto transition-all easy-in-out duration-900 bg-gray-400 ">
                         <img :src="'/img/' + $parent.projets[$parent.indexModal].image[0]" alt="" class="w-full z-0"/>
                     </div>
-                    <div class="rounded-b-lg w-9/12 md:w-7/12 h-6 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900 darkest "></div>
+                    <div class="rounded-b-lg w-9/12 md:w-7/12 h-6 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900 bg-gray-500"></div>
                 </div>
                 <div class="flex flex-wrap weight-regular text-black text-left mt-12">
                     <div class="w-full p-1 text-center">
@@ -25,14 +25,22 @@
                                 {{label}}
                             </div>
                         </div>
-                        <p class="text-md lg:text-lg px-8">{{ $parent.projets[$parent.indexModal].description }}</p>
-                        <div class="w-full md:w-1/2 flex justify-center">
-                            <div class="mt-8 text-md font-bold text-left">
-                                <div v-for="(task, index) in $parent.projets[$parent.indexModal].tasks" :key="index" class="mt-2">
-                                    <i class="fas fa-check text-secondary mr-2"></i>{{task}}
+                        <div class="flex w-full justify-center items-center flex-wrap">
+                            <div class="">
+                                <div class="relative">
+                                    <img :src="'/img/' + $parent.projets[$parent.indexModal].image[0]" alt="" class="rounded-xl w-96 relative z-20"/>
+                                    <div class="absolute rounded-full bottom-0 left-0 w-48 h-48 -mb-8 -ml-14" :class="'bg-'+$parent.projets[$parent.indexModal].color+'-300'"></div>
+                                </div>
+                            </div>
+                            <div class="ml-8">
+                                <div class="text-lg font-bold text-left">
+                                    <div v-for="(task, index) in $parent.projets[$parent.indexModal].tasks" :key="index" class="mt-2">
+                                        <i class="fas fa-check text-secondary mr-2"></i>{{task}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                       <p class="text-md lg:text-lg px-8 mt-16">{{ $parent.projets[$parent.indexModal].description }}</p>
                        
                     </div>
                 </div>      

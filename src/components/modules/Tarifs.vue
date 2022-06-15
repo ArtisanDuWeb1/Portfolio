@@ -254,7 +254,7 @@
 </template>
 
 <script>
-import Titre from './Titre.vue'
+import Titre from '../partials/Titre.vue'
 export default {
     name:"Tarifs",
     components:{

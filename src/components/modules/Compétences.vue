@@ -6,7 +6,7 @@
             <div class="w-full md:w-1/2 darkest py-[80px] ">
                  <div class="absolute top-0 left-0 darkest w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
                 <div class="px-8 md:px-12 lg:px-[60px] xl:px-[80px] mb-10">
-                    <Titre class="" title="Compétences" align="left" subtitle="Des compétences à votre service"/>
+                    <Titre class="" title="Compétences" align="left" titleClass="text-dark" subtitle="Des compétences à votre service"/>
                     <p class="text-md lg:text-lg xl:text-xl text-gray-400 text-left mt-8">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis metus eget elit pharetra finibus. Aenean mollis pulvinar eros, eget vehicula magna. 
                         Integer consequat, nisl eget cursus blandit, 
@@ -64,19 +64,19 @@
                     <div class="flex flex-wrap">
                         <div class="flex flex-col group mr-6 hover:scale-110 transition-all easy-in justify-center mt-3">
                             <div class="text-6xl text-white opacity-50 group-hover:opacity-100 transition-all easy-in">
-                                <img src="../assets/ps-logo.png" class="w-[40px] mx-auto"/>
+                                <img src="img/icons/ps-logo.png" class="w-[40px] mx-auto"/>
                             </div>
                             <span class="font-bold text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">Photoshop</span>
                         </div>
                         <div class="flex flex-col group mr-6 hover:scale-110 transition-all easy-in justify-center mt-3">
                             <div class="text-6xl text-white opacity-50 group-hover:opacity-100 transition-all easy-in">
-                                <img src="../assets/illustartor-logo.png" class="w-[40px] mx-auto"/>
+                                <img src="img/icons/illustartor-logo.png" class="w-[40px] mx-auto"/>
                             </div>
                             <span class="font-bold text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">illustrator</span>
                         </div>
                         <div class="flex flex-col group mr-6 hover:scale-110 transition-all easy-in justify-center mt-3">
                             <div class="text-6xl text-white opacity-50 group-hover:opacity-100 transition-all easy-in">
-                                <img src="../assets/in-logo.png" class="w-[40px] mx-auto"/>
+                                <img src="img/icons/in-logo.png" class="w-[40px] mx-auto"/>
                             </div>
                             <span class="font-bold text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">inDesign</span>
                         </div> 
@@ -250,7 +250,7 @@
 </template>
 
 <script>
-import Titre from './Titre.vue'
+import Titre from '../partials/Titre.vue'
 export default {
     name:"Competences",
     components:{
@@ -268,7 +268,6 @@ export default {
  
     }
     .img-bg{
-        background-image:url('https://images.assetsdelivery.com/compings_v2/peshkov/peshkov1902/peshkov190200709.jpg');
         background-repeat:no-repeat;
         background-position:center;
         background-size:cover;

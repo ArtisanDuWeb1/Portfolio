@@ -49,8 +49,8 @@
 </template>
 
 <script >
-import Titre from './Titre.vue'
-import ProjectModal from './ProjectModal.vue'
+import Titre from '../partials/Titre.vue'
+import ProjectModal from '../partials/ProjectModal.vue'
 export default {
     name:"Portfolio",
     components:{

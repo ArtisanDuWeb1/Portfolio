@@ -9,7 +9,7 @@
       </div>
       <div class="w-full md:w-1/2 darker decale px-8 sm:px-12 py-[80px] lg:py-[80px] xl:py-[130px] lg:px-[80px] xl:px-[130px]">
         <div class="absolute top-0 left-0 darker w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
-        <mainTitle class="text-left" title="à propos" subtitle="En savoir plus sur l'artisan du web" /> 
+        <mainTitle class="text-left" title="à propos" titleClass="text-dark" subtitle="En savoir plus sur l'artisan du web" /> 
         <p class="text-left mt-12 text-gray-400 lg:text-lg xl:text-xl md:text-md">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis metus eget elit pharetra finibus. Aenean mollis pulvinar eros, eget vehicula magna. 
           <br><br>
@@ -21,17 +21,23 @@
         </div>
       </div>     
     </div>
+    <Services class="mt-14"></Services>
+    <Competences></Competences>
   </div>
 </template>
 
 <script>
-import mainTitle from './Titre.vue'
-import buttonMain from './Button.vue'
+import mainTitle from '../partials/Titre.vue'
+import Services from '../modules/Services.vue'
+import Competences from '../modules/Compétences.vue'
+import buttonMain from '../partials/Button.vue'
 export default {
     name:"About",
     components:{
         mainTitle,
         buttonMain,
+        Competences,
+        Services,
     }
 }
 </script>

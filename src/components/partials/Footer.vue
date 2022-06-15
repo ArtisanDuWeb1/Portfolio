@@ -4,7 +4,7 @@
             <div class="flex justify-between">
                 <div class="darkest w-1/2 p-16">
                     <div @click="$parent.scrollTo('slider')" class="flex py-3 cursor-pointer items-center">
-                        <img alt="logo" class="w-12 sm:w-12 md:w-16  h-auto" src="../assets/logoAW.png">
+                        <img alt="logo" class="w-12 sm:w-12 md:w-16  h-auto" src="img/site/logoAW.png">
                         <div class="flex-col ml-2 lg:flex text-left text-shadow josefin">
                             <span class="text-white  text-sm sm:text-md md:text-lg lg:text-xl">l'<span class="font-bold text-gray-300">A</span>rtisan<br> du <span class="font-bold text-gray-300">W</span>eb</span>   
                         </div>

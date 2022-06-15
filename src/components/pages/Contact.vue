@@ -24,7 +24,7 @@
             <mainTitle title="Contactez-moi" subtitle="Je suis disponible du lundi au vendredi " class="mb-12"/>
             <div class="flex mb-5 items-center">
                 <div class="w-24 h-24  overflow-hidden rounded-full flex justify-center border-secondary border-4">
-                    <img src="../assets/pdp.jpg" alt="" class="w-32">
+                    <img src="img/site/pdp.jpg" alt="" class="w-32">
                 </div>
                 <div class="text-gray-300 ml-3 text-2xl">
                     <span class="uppercase">Jules Tonolo</span>
@@ -95,8 +95,8 @@
 </template>
 
 <script>
-import mainTitle from './Titre.vue'
-import MainButton from './Button.vue'
+import mainTitle from '../partials/Titre.vue'
+import MainButton from '../partials/Button.vue'
 export default {
     name: "Contact",
     components:{

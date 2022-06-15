@@ -1,9 +1,9 @@
 <template>
     <div id="services" class="z-10 py-16">
-        <mainTitle title="Mes services" subtitle="Des prestations adaptées à vos besoins" align="center" :dark="true" class="z-10 mt-16 " />
+        <mainTitle title="Mes services" subtitle="Des prestations adaptées à vos besoins" align="center" titleClass="text-darkest" class="z-10 mt-16 " />
         <div class="w-full pt-6 pb-0 md:pb-16">
             
-            <kinesis-container class="w-full sm:w-full md:w-11/12 lg:w-10/12 mx-auto">
+            <kinesis-container class="w-full sm:w-full  lg:w-10/12 mx-auto">
                 <div class="flex justify-center py-12 flex-wrap relative items-center z-10">
                     <div class="w-11/12 sm:w-11/12 md:w-1/2 mx-auto md:p-0 z-10">
                         <div class="flex group items-center mx-auto ">
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <kinesis-element tag="div" :strength="30" originX="50" class="absolute w-full sm:w-full md:w-1/2 xl:w-4/12 z-0 opacity-0 md:opacity-25" type="depth">
-                        <img src="../assets/iphonelogo.png" class="" alt="">
+                        <img src="img/site/iphonelogo.png" class="" alt="">
                     </kinesis-element>                   
                 </div>
             </kinesis-container>
@@ -108,7 +108,7 @@
 </template>
 
 <script>
-import mainTitle from './Titre.vue'
+import mainTitle from '../partials/Titre.vue'
 
 export default {
     name:"Services",
@@ -121,13 +121,10 @@ export default {
 </script>
 
 <style>
-    #img-banner-1{
-        background-image:url('../assets/communication-g8c62227f7_1920.jpg');
-    }
     #container-responsive{
     
         background:linear-gradient(180deg, rgba(34,193,195,0) 50%, #0a0a0b 90%),
-                    linear-gradient(0deg, rgba(34,193,195,0) 10%, #1b1d1f 95%);
+                   linear-gradient(0deg, rgba(34,193,195,0) 10%, #1b1d1f 95%);
         height:700px;
     }
 </style>

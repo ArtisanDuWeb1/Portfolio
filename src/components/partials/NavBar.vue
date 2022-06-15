@@ -4,7 +4,7 @@
             <div :class="{'pr-4' : $parent.modal }">
                 <div class="w-full mx-auto flex justify-between p-3 px-4 lg:px-8 xl:px-12 ">
                     <div @click="$parent.scrollTo('slider')" class="flex py-3 cursor-pointer ">
-                        <img alt="logo" class="w-12 sm:w-12 md:w-16  h-auto" src="../assets/logoAW.png">
+                        <img alt="logo" class="w-12 sm:w-12 md:w-16  h-auto" src="img/site/logoAW.png">
                         <div class="flex-col ml-2 lg:flex my-auto text-left text-shadow">
                             <span class="text-white  text-sm sm:text-md md:text-lg lg:text-xl">l'<span class="font-bold text-gray-300">A</span>rtisan<br> du <span class="font-bold text-gray-300">W</span>eb</span>   
                         </div>
@@ -17,10 +17,6 @@
                         <div @click="$parent.swapToComponent('about')"  class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
                             à propos
                             <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'about'}"></div>
-                        </div>
-                        <div @click="$parent.swapToComponent('competences')" class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
-                            Compétences
-                             <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'competences'}"></div>
                         </div>
                         <div @click="$parent.swapToComponent('portfolio')" class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
                             Portfolio
