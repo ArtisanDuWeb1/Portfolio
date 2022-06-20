@@ -1,47 +1,37 @@
 <template>
-    <div id="portfolio" class="w-full flex flex-wrap relative justify-center mt-20">
+    <div id="portfolio" class="w-full flex flex-wrap relative justify-center mt-24 ">
         <div class="absolute w-[2px] h-[150px] secondary -mt-10 z-20"></div>
-        <div class="absolute bottom-0 w-[2px] h-[150px] secondary -mb-[100px] z-20"></div>
-        <div class="w-full md:w-1/2 bg-gray-200 px-8 pb-16">
-            <div class="px-8 h-72 flex items-center">
-              <Titre title="Les projets" :titleClass="'text-gray-400'" :dark="true" align="left" class="ml-12 mt-7"/>
-            </div>
-            <div @click="loadModal(item.id)" v-for="(item ,index) in GetPairProjects" :key="index"  class="relative w-full group py-24 bg-gray-300 cursor-pointer transition-all easy-in-out duration-900 mb-36" :class="'hover:bg-' + item.color + '-300'">
-                <div class="rounded-t-lg bg-gray-400 p-5 w-8/12 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-400'">
-                    <img :src="'/img/' + item.image[0]" alt="" class="w-full z-0"/>
+        
+        <div class="w-full flex">
+            <div  class="w-full md:w-1/2 px-8 pb-16 bg-gray-200">
+                <div class="px-8 h-72 flex items-center">
+                    <Titre title="Les projets" :titleClass="'text-gray-400'" :dark="true" align="left" class="ml-12 mt-7"/>
                 </div>
-                <div class="rounded-b-lg w-9/12 h-6 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-500'"></div>
-                 <div class="absolute font-bold text-[2.5rem] bottom-0  text-gray-500 text-left z-30 ml-12 -mb-14">
-                    {{item.title}}
-                    <div class="text-2xl flex -mt-2 font-thin">
-                        <span class="mr-2 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
-                                <path d="M20 19H4C2.9 19 2 18.1 2 17H22C22 18.1 21.1 19 20 19Z" fill="#5a832f"/>
-                                <path opacity="0.3" d="M20 5H4C3.4 5 3 5.4 3 6V17H21V6C21 5.4 20.6 5 20 5Z" fill="#7cb342"/>
-                            </svg>
-                        </span>{{item.category}}
-                    </div>
-                </div>      
             </div>
-        </div>
-        <div class="w-full md:w-1/2  pb-20 bg-gray-200 mt-0 md:mt-20  px-8">
-            <div class=" h-72 md:flex hidden items-center"></div>
-            <div @click="loadModal(item.id)" v-for="(item ,index) in GetUnpairProjects" :key="index"  class="relative w-full group py-24 bg-gray-300 cursor-pointer transition-all easy-in-out duration-900 mb-36" :class="'hover:bg-' + item.color + '-300'">
-                <div class="rounded-t-lg bg-gray-400 p-5 w-8/12 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-400'">
-                    <img :src="'/img/' + item.image[0]" alt="" class="w-full z-0"/>
-                </div>
-                <div class="rounded-b-lg w-9/12 h-6 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-500'"></div>
-                 <div class="absolute font-bold text-[2.5rem] bottom-0  text-gray-500 text-left z-30 ml-12 -mb-14">
-                    {{item.title}}
-                    <div class="text-2xl flex -mt-2 font-thin">
-                        <span class="mr-2 ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
-                                <path d="M20 19H4C2.9 19 2 18.1 2 17H22C22 18.1 21.1 19 20 19Z" fill="#5a832f"/>
-                                <path opacity="0.3" d="M20 5H4C3.4 5 3 5.4 3 6V17H21V6C21 5.4 20.6 5 20 5Z" fill="#7cb342"/>
-                            </svg>
-                        </span>{{item.category}}
+            <div  class="hidden md:flex md:w-1/2 0 mt-20 bg-gray-200">
+            </div>
+        </div>   
+        <div class="w-full pb-20 bg-gray-200 px-8 -mt-6">
+            <div id="gallery" class="flex flex-wrap">
+                <div @click="loadModal(item.id)" v-for="(item ,index) in projets" :id="'projet-'+ item.id" :key="index" :class="[numIsPair(index) ? 'pr-7' : 'mt-24 pl-7' ]" class="opacity-0  w-full md:w-1/2 group  cursor-pointer transition-all easy-in-out duration-900 mb-24">
+                    <div :class="'hover:bg-' + item.color + '-300'" class="py-24  bg-gray-300 relative ">
+                        <div class="rounded-t-lg bg-gray-400 p-5 w-8/12 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-400'">
+                            <img :src="'/img/projets/' + item.image[0]" alt="" class="w-full z-0"/>
+                        </div>
+                        <div class="rounded-b-lg w-9/12 h-6 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-500'"></div>
+                        <div class="absolute font-bold text-[2.5rem] bottom-0  text-gray-500 text-left z-30 ml-12 -mb-14">
+                            {{item.title}}
+                            <div class="text-2xl flex -mt-2 font-thin">
+                                <span class="mr-2 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
+                                        <path d="M20 19H4C2.9 19 2 18.1 2 17H22C22 18.1 21.1 19 20 19Z" fill="#5a832f"/>
+                                        <path opacity="0.3" d="M20 5H4C3.4 5 3 5.4 3 6V17H21V6C21 5.4 20.6 5 20 5Z" fill="#7cb342"/>
+                                    </svg>
+                                </span>{{item.category}}
+                            </div>
+                        </div>      
                     </div>
-                </div>      
+                </div>
             </div>
         </div>
         <ProjectModal v-show="modal"></ProjectModal>
@@ -57,13 +47,21 @@ export default {
         Titre,
         ProjectModal,
     },
+    created () {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed () {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
     data () {
         return {
             indexModal:0,
             modal:false,
+            mute:false,
+            animated:[],
             projets:[
                 {
-                    id:0,
+                    id:"0",
                     title: "l'Artisan du Web",
                     category: "Site web",
                     labels:[
@@ -84,7 +82,28 @@ export default {
                     color:'green',
                 },
                 {
-                    id:1,
+                    id:"1",
+                    title: "l'Artisan du Web",
+                    category: "Site web",
+                    labels:[
+                        'laravel',
+                        'php',
+                        'vuejs'
+                    ],
+                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent egestas libero ipsum, et pulvinar sem fringilla id. Cras lobortis nulla ante, et finibus libero convallis eget. Pellentesque ultricies libero tellus.',
+                    tasks:[
+                        "Création d'un logo et d'illustrations (Illustrator)",
+                        "Conception graphique & Webdesign (Photoshop)",
+                        "Développement sous Laravel - MySQL",
+                        "Interface d'administration",
+                    ],
+                    image:[
+                        'capture-portfolio.png',
+                        ],
+                    color:'green',
+                },
+                {
+                    id:"2",
                     title: "Carologie",
                     category: "Site web",
                     labels:[
@@ -105,7 +124,7 @@ export default {
                     
                 },
                 {
-                    id:2,
+                    id:"3",
                     title: "Biskit",
                     category: "Site web",
                     labels:[
@@ -127,7 +146,7 @@ export default {
                     
                 },
                 {
-                    id:"3",
+                    id:"4",
                     title: "Étoile Champenoise",
                     category: "Site web / Web app",
                     labels:[
@@ -155,29 +174,48 @@ export default {
         },
         toggleModal (){
             const scrollY= window.scrollY;
+            this.mute=true;
             if(this.modal){
                 this.$parent.animateCSS('#modal', 'slideOutRight').then((message) => {
-                if(message == "Animation ended"){
-                    const topY = document.body.style.top;
-                    this.modal = !this.modal
-                    document.body.style.position = ""
-                    document.body.style.top = "";
-                    document.body.style.paddingRight = "0px";
-                    window.scrollTo(0, parseInt(topY || '0') * -1)
-                }
+                    if(message == "Animation ended"){
+                        const topY = document.body.style.top;
+                        this.modal = !this.modal
+                        document.body.style.position = ""
+                        document.body.style.top = "";
+                        document.body.style.paddingRight = "0px";
+                        window.scrollTo(0, parseInt(topY || '0') * -1)
+                        this.mute=false;
+                    }
                 })
             }else{
                 this.modal = !this.modal
                 this.$parent.animateCSS('#modal', 'slideInRight');
                 document.body.style.position = "fixed";
                 document.body.style.top = "-" +  scrollY + "px";
-                document.body.style.paddingRight = "15px";  
+                document.body.style.paddingRight = "15px"; 
+                this.mute=false;
             }
         },
         loadModal(id){
-            this.indexModal = id;
-            this.toggleModal();
-        }  
+            if(this.mute==false){
+                this.indexModal = id;
+                this.toggleModal();
+            } 
+        },
+        handleScroll(){
+            const gallery = document.getElementById('gallery').children;
+            
+            for (let i = 0; i < gallery.length; i++) {
+                if(gallery[i].offsetTop +300 < window.scrollY && this.animated.findIndex(element => element == gallery[i].id) == -1){
+                    this.$parent.animateCSS('#'+ gallery[i].id, 'fadeIn').then((message) => {
+                        if(message == "Animation ended"){
+                           gallery[i].style.opacity = "100%";
+                        }
+                    })
+                    this.animated.push(gallery[i].id);
+                }
+            }
+        }
     },
     computed:{
         GetPairProjects(){

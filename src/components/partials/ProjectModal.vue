@@ -1,11 +1,11 @@
 <template>
   <div class="full-modal ">
         <div class="flex min-h-full w-full justify-end relative overflow-hidden ">
-            <div class="w-full h-full z-0 absolute" @click="$parent.toggleModal">
+            <div class="w-full h-full z-0 absolute" @click="closeModal">
 
             </div>
             <div id="modal" class="modal relative w-full lg:w-3/5 xl:1/2 bg-gray-300 shadow-2xl pb-16">
-                <div class="border border-gray-300 fixed p-2 px-5 right-0 mr-3 text-xl hover:bg-gray-300 text-gray-300 cursor-pointer -mt-2 z-50" @click="$parent.toggleModal">
+                <div class="border border-gray-300 fixed p-2 px-5 right-0 mr-3 text-xl hover:bg-gray-300 text-gray-300 cursor-pointer -mt-2 z-50" @click="closeModal">
                     <i class="fas fa-times"></i>
                 </div>
                 <div class="dark relative flex items-center justify-center h-[500px] px-5">
@@ -13,7 +13,7 @@
                 </div>
                  <div class="md:-mt-[180px] -mt-[130px] relative">
                     <div class="rounded-t-lg bg-gray-400 p-5 w-8/12 md:w-6/12 mx-auto transition-all easy-in-out duration-900 bg-gray-400 ">
-                        <img :src="'/img/' + $parent.projets[$parent.indexModal].image[0]" alt="" class="w-full z-0"/>
+                        <img :src="'/img/projets/' + $parent.projets[$parent.indexModal].image[0]" alt="" class="w-full z-0"/>
                     </div>
                     <div class="rounded-b-lg w-9/12 md:w-7/12 h-6 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900 bg-gray-500"></div>
                 </div>
@@ -28,7 +28,7 @@
                         <div class="flex w-full justify-center items-center flex-wrap">
                             <div class="">
                                 <div class="relative">
-                                    <img :src="'/img/' + $parent.projets[$parent.indexModal].image[0]" alt="" class="rounded-xl w-96 relative z-20"/>
+                                    <img :src="'/img/projets/' + $parent.projets[$parent.indexModal].image[0]" alt="" class="rounded-xl w-96 relative z-20"/>
                                     <div class="absolute rounded-full bottom-0 left-0 w-48 h-48 -mb-8 -ml-14" :class="'bg-'+$parent.projets[$parent.indexModal].color+'-300'"></div>
                                 </div>
                             </div>
@@ -52,7 +52,6 @@
 
 <script>
 
-
 export default {
     name:"ProjectModal",
     props:[
@@ -69,6 +68,13 @@ export default {
                 pageDots: true,
                 wrapAround: false,
                 freeScroll: false,
+            }
+        }
+    },
+    methods:{
+        closeModal(){
+            if(this.$parent.mute==false){
+                this.$parent.toggleModal();
             }
         }
     }
@@ -88,6 +94,7 @@ export default {
         background-position:fixed;
         overflow:auto;
         top:0;
+        right:0;
     }
 
 
