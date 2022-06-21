@@ -1,5 +1,5 @@
 <template>
-    <div id="portfolio" class="w-full flex flex-wrap relative justify-center mt-24 ">
+    <div id="portfolio" class="w-full flex flex-wrap relative justify-center mt-24">
         <div class="absolute w-[2px] h-[150px] secondary -mt-10 z-20"></div>
         
         <div class="w-full flex">
@@ -11,14 +11,14 @@
             <div  class="hidden md:flex md:w-1/2 0 mt-20 bg-gray-200">
             </div>
         </div>   
-        <div class="w-full pb-20 bg-gray-200 px-8 -mt-6">
+        <div class="w-full pb-12 md:pb-32 bg-gray-200 px-8 -mt-6">
             <div id="gallery" class="flex flex-wrap">
-                <div @click="loadModal(item.id)" v-for="(item ,index) in projets" :id="'projet-'+ item.id" :key="index" :class="[numIsPair(index) ? 'pr-7' : 'mt-24 pl-7' ]" class="opacity-0  w-full md:w-1/2 group  cursor-pointer transition-all easy-in-out duration-900 mb-24">
+                <div @click="loadModal(item.id)" v-for="(item ,index) in projets" :id="'projet-'+ item.id" :key="index" :class="[numIsPair(index) ? 'md:pr-7' : 'md:mt-24 md:pl-7' ]" class="animate__slow opacity-0 pr-0 pl-0 w-full md:w-1/2 group  cursor-pointer transition-all easy-in-out duration-900 mb-24">
                     <div :class="'hover:bg-' + item.color + '-300'" class="py-24  bg-gray-300 relative ">
-                        <div class="rounded-t-lg bg-gray-400 p-5 w-8/12 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-400'">
+                        <div class="rounded-t-lg bg-gray-400 p-3 w-8/12 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-400'">
                             <img :src="'/img/projets/' + item.image[0]" alt="" class="w-full z-0"/>
                         </div>
-                        <div class="rounded-b-lg w-9/12 h-6 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-500'"></div>
+                        <div class="rounded-b-lg w-9/12 h-4 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-500'"></div>
                         <div class="absolute font-bold text-[2.5rem] bottom-0  text-gray-500 text-left z-30 ml-12 -mb-14">
                             {{item.title}}
                             <div class="text-2xl flex -mt-2 font-thin">
@@ -62,8 +62,8 @@ export default {
             projets:[
                 {
                     id:"0",
-                    title: "l'Artisan du Web",
-                    category: "Site web",
+                    title: "lsroleplay",
+                    category: "Web App",
                     labels:[
                         'laravel',
                         'php',
@@ -176,7 +176,7 @@ export default {
             const scrollY= window.scrollY;
             this.mute=true;
             if(this.modal){
-                this.$parent.animateCSS('#modal', 'slideOutRight').then((message) => {
+                this.$parent.animateCSS('#modal', 'fadeOutRight').then((message) => {
                     if(message == "Animation ended"){
                         const topY = document.body.style.top;
                         this.modal = !this.modal
@@ -189,7 +189,7 @@ export default {
                 })
             }else{
                 this.modal = !this.modal
-                this.$parent.animateCSS('#modal', 'slideInRight');
+                this.$parent.animateCSS('#modal', 'fadeInRight');
                 document.body.style.position = "fixed";
                 document.body.style.top = "-" +  scrollY + "px";
                 document.body.style.paddingRight = "15px"; 
@@ -231,6 +231,10 @@ export default {
 <style>
     .bg-black-opacity{
         background-color:rgba(0, 0, 0, 0.699)
+    }
+    :root {
+        --animate-duration: 1100ms;
+        --animation-delay:0,0000001ms ;
     }
 
 </style>

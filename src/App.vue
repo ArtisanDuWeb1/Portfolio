@@ -4,7 +4,7 @@
     
     <Slider/>
     <component :is="currentTab"></component>
-    <Footer v-show="false"/>
+    <Footer/>
   </div>
 </template>
 

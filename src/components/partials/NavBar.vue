@@ -1,5 +1,5 @@
 <template>
-    <nav id="navbar" class="w-full z-50 top-0 animate__animated animate__fadeInDownBig animate__delay-5s absolute">
+    <nav id="navbar" class="w-full z-50 top-0 animate__animated animate__fadeInDownBig animate__delay-5s absolute" :class="{'darker' : menu}">
         <div class="w-full">
             <div :class="{'pr-4' : $parent.modal }">
                 <div class="w-full mx-auto flex justify-between p-3 px-4 lg:px-8 xl:px-12 ">
@@ -12,7 +12,7 @@
                     <div class=" hidden md:flex text-gray-400 uppercase text-lg  justify-center font-semibold">
                         <div @click="$parent.swapToComponent('home')" class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
                             Accueil
-                            <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'services'}"></div>
+                            <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'home'}"></div>
                         </div>
                         <div @click="$parent.swapToComponent('about')"  class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
                             à propos
@@ -28,41 +28,21 @@
                         </div>
                          
                     </div>
-                   <div class="py-1 flex items-center my-auto ml-8">
+                    <div class="flex">
+                        <div class="py-1 flex items-center my-auto ml-8">
                             <button type="button" class="uppercase text-dark hover:text-black secondary focus:ring-4 font-bold rounded-full text-md p-2 px-3 text-center hover:scale-110 transition-all easy-in"><i class="fas fa-envelope"></i></button>
                         </div>
-                    <div @click="menu=!menu" :class="{'bg-white text-black' : menu}" class="p-3 border-white border text-white flex md:hidden items-center justify-center my-auto rounded-full relative text-lg">
-                        <i class="fas fa-bars"></i>
+                        <div @click="menu=!menu" :class="{'bg-white text-black' : menu}" class="p-3 border-white border text-white flex md:hidden items-center justify-center my-auto rounded-full relative text-lg ml-4">
+                            <i class="fas fa-bars"></i>
+                        </div>
                     </div>
+                   
                 </div>
-                <div v-if="menu" class="w-full bg-black uppercase text-xl text-white mx-auto bg-black justify-center pb-12">
-                    <div @click="link('services')" :class="{'bg-white text-black font-bold' : $parent.currentTab == 'services'}" class="py-3 flex items-center justify-center border-white hover:font-bold cursor-pointer">Services</div>
-                    <div @click="$parent.scrollTo('competences')" :class="{'bg-white text-black font-bold' : $parent.currentTab == 'competences'}" class="py-3 h-full flex items-center justify-center border-gray-300 hover:font-bold cursor-pointer">Compétences</div>
-                    <div @click="$parent.scrollTo('portfolio')" :class="{'bg-white text-black font-bold' : $parent.currentTab == 'portfolio' || $parent.modal}" class="py-3 flex items-center justify-center border-white hover:font-bold cursor-pointer">Portfolio</div>
-                    <div @click="$parent.scrollTo('tarifs')" :class="{'bg-white text-black font-bold' : $parent.currentTab == 'tarifs'}" class="py-3 flex items-center justify-center border-white hover:font-bold cursor-pointer">Tarifs</div>
-                    <div @click="$parent.scrollTo('contact')" :class="{'bg-white text-black font-bold' : $parent.currentTab == 'contact'}" class="py-3 flex items-center justify-center border-white hover:font-bold cursor-pointer">Contact</div>
-                    <div class="w-full py-3 flex justify-center">
-                        <button type="button" class="uppercase text-white text-black bg-white focus:ring-0 font-bold rounded-lg text-md px-5 py-2.5 text-center mr-2 mb-2 my-3">Demander un devis</button>
-                    </div>
-                    <div class="w-full">
-                        <div class="">
-
-                        </div>
-                    </div>
-                    <div class="flex justify-center text-2xl text-white my-3">
-                        <div class="px-2">
-                            <i class="fab fa-facebook"></i>
-                        </div>
-                        <div class="px-2">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <div class="px-2">
-                            <i class="fab fa-behance"></i>
-                        </div>
-                        <div class="px-2">
-                            <i class="fab fa-twitter"></i>
-                        </div>
-                    </div>
+                <div v-if="menu" class="w-full uppercase text-xl text-white mx-auto justify-center font-bold border-t border-gray-900 px-8">
+                    <div @click="$parent.swapToComponent('home')" :class="{'bg-white text-black font-bold' : $parent.currentTab == 'home'}" class="border-b border-gray-900 py-10 flex items-center justify-center border-white hover:font-bold cursor-pointer">Accueil</div>
+                    <div @click="$parent.swapToComponent('about')" :class="{'bg-white text-black font-bold' : $parent.currentTab == 'competences'}" class="border-b border-gray-900 py-10 h-full flex items-center justify-center border-gray-300 hover:font-bold cursor-pointer">À propos</div>
+                    <div @click="$parent.swapToComponent('portfolio')" :class="{'bg-white text-black font-bold' : $parent.currentTab == 'portfolio' || $parent.modal}" class="border-b border-gray-900 py-10 flex items-center justify-center border-white hover:font-bold cursor-pointer">Portfolio</div>
+                    <div @click="$parent.swapToComponent('contact')" :class="{'bg-white text-black font-bold' : $parent.currentTab == 'contact'}" class="py-10 flex items-center justify-center border-white hover:font-bold cursor-pointer">Contact</div>
                 </div>
             </div>
         </div>

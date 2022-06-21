@@ -94,7 +94,7 @@
                                 <i class="fas fa-check-circle text-secondary"></i>
                             </div>
                             <div class="ml-3">
-                                <h6 class="uppercase font-medium text-lg">Gestion de projet web</h6>
+                                <h6 class="uppercase font-medium text-md lg:text-lg">Gestion de projet web</h6>
                                 <div class="text-md text-gray-400">
                                     Site vitrine, corporate, évènementiel, e-commerce, intranet.    
                                 </div>
@@ -105,7 +105,7 @@
                                 <i class="fas fa-check-circle text-secondary"></i>
                             </div>
                             <div class="ml-3">
-                                <h6 class="uppercase font-medium text-lg">Concetption graphique et webdesign</h6>
+                                <h6 class="uppercase font-medium text-md lg:text-lg">Concetption graphique et webdesign</h6>
                                 <div class="text-md text-gray-400">
                                     Logos, templates Web, plaquettes publicitaires, cartes de visite, newsletters...
                                 </div>
@@ -116,7 +116,7 @@
                                 <i class="fas fa-check-circle text-secondary"></i>
                             </div>
                             <div class="ml-3">
-                                <h6 class="uppercase font-medium text-lg">Applications spécifique et interfaces d'administration</h6>
+                                <h6 class="uppercase font-medium text-md lg:text-lg">Applications spécifique et interfaces d'administration</h6>
                                 <div class="text-md text-gray-400">
                                     PHP - MYSQL - LARAVEL - JS - AJAX - VUEJS - SQL                          
                                 </div>
@@ -127,7 +127,7 @@
                                 <i class="fas fa-check-circle text-secondary"></i>
                             </div>
                             <div class="ml-3">
-                                <h6 class="uppercase font-medium text-lg">INTÉGRATION HTML / CSS</h6>
+                                <h6 class="uppercase font-medium text-md lg:text-lg">INTÉGRATION HTML / CSS</h6>
                                 <div class="text-md text-gray-400">
                                     Codage à la main respectueux des standards du Web 
                                 </div>
@@ -138,7 +138,7 @@
                                 <i class="fas fa-check-circle text-secondary"></i>
                             </div>
                             <div class="ml-3">
-                                <h6 class="uppercase font-medium text-lg">MISE EN PLACE / MODIFICATION / GESTION DE CMS</h6>
+                                <h6 class="uppercase font-medium text-md lg:text-lg">MISE EN PLACE / MODIFICATION / GESTION DE CMS</h6>
                                 <div class="text-md text-gray-400">
                                     Wordpress, Joomla, Prestashop, phpBB, IPBoard
                                 </div>
@@ -149,7 +149,7 @@
                                 <i class="fas fa-check-circle text-secondary"></i>
                             </div>
                             <div class="ml-3">
-                                <h6 class="uppercase font-medium text-lg">Dynamisme des pages par Javascrpit / AJAX</h6>
+                                <h6 class="uppercase font-medium text-md lg:text-lg">Dynamisme des pages par Javascrpit / AJAX</h6>
                                 <div class="text-md text-gray-400">
                                     jQuery, VueJs, babel, Inertia
                                 </div>
@@ -160,7 +160,7 @@
                                 <i class="fas fa-check-circle text-secondary"></i>
                             </div>
                             <div class="ml-3">
-                                <h6 class="uppercase font-medium text-lg">Validation W3C, WAI & référencement naturel SEO</h6>
+                                <h6 class="uppercase font-medium text-md lg:text-lg">Validation W3C, WAI & référencement naturel SEO</h6>
                                 <div class="text-md text-gray-400">
                                     Accessibilité & ergonomie des pages web
                                 </div>
@@ -171,7 +171,7 @@
                                 <i class="fas fa-check-circle text-secondary"></i>
                             </div>
                             <div class="ml-3">
-                                <h6 class="uppercase font-medium text-lg">CONCEPTION MULTI-PLATEFORMES</h6>
+                                <h6 class="uppercase font-medium text-md lg:text-lg">CONCEPTION MULTI-PLATEFORMES</h6>
                                 <div class="text-md text-gray-400">
                                     Compatible tous supports, tablette & application mobile
                                 </div>

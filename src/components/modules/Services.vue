@@ -1,13 +1,13 @@
 <template>
-    <div id="services" class="z-10 py-16">
-        <mainTitle title="Mes services" subtitle="Des prestations adaptées à vos besoins" align="center" titleClass="text-darkest" class="z-10 mt-16 " />
-        <div class="w-full pt-6 pb-0 md:pb-16">
+    <div id="services" class="z-10 py-4 md:py-24 ">
+        <mainTitle title="Mes services" subtitle="Des prestations adaptées à vos besoins" align="center" titleClass="text-darkest" class="z-10 mt-10 " />
+        <div class="w-full pt-6 pb-0 ">
             
-            <kinesis-container class="w-full sm:w-full  lg:w-10/12 mx-auto">
+            <kinesis-container class="w-full sm:w-full px-0 md:px-4 lg:px-0  lg:w-11/12 xl:w-10/12 mx-auto">
                 <div class="flex justify-center py-12 flex-wrap relative items-center z-10">
                     <div class="w-11/12 sm:w-11/12 md:w-1/2 mx-auto md:p-0 z-10">
                         <div class="flex group items-center mx-auto ">
-                            <div class="mr-4 rounded-full border-2 p-6 border-black flex items-center justify-center text-lg lg:text-xl xl:text-2xl text-secondary group-hover:bg-black transition-all easy-in duration-900">
+                            <div class="mr-4 rounded-full border-2 p-6 border-black flex items-center justify-center text-lg lg:text-xl xl:text-2xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
                                 <i class="fas fa-project-diagram"></i>
                             </div>
                             <div class="">
@@ -18,7 +18,7 @@
                             </div>
                         </div>
                         <div class="flex group items-center mt-8 mx-auto">
-                            <div class="mr-4 rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900">
+                            <div class="mr-4 rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
                                 <i class="fas fa-edit"></i>
                             </div>
                             <div class="ml-4">
@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <div class="flex group items-center mt-8 mx-auto">
-                            <div class="mr-4 rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900">
+                            <div class="mr-4 rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
                                 <i class="fas fa-wrench"></i>
                             </div>
                             <div class="ml-4">
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="flex group items-center mt-8 mx-auto ">
-                            <div class="mr-4 rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900">
+                            <div class="mr-4 rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
                                 <i class="fas fa-check"></i>
                             </div>
                             <div class="ml-4">
@@ -59,7 +59,7 @@
                                     Logos, templates Web, plaquettes publicitaires, cartes de visite, newsletters...
                                 </div>
                             </div>
-                            <div class="rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900">
+                            <div class="rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
                                 <i class="fas fa-pen"></i>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                     Des animations de contenu non intrusives pour embellir votre projet.
                                 </div>
                             </div>
-                            <div class="rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900">
+                            <div class="rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
                                 <i class="fas fa-sync-alt"></i>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                                     Outils spécifiques au bon fonctionnement de votre entreprise.
                                 </div>
                             </div>
-                            <div class="rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900">
+                            <div class="rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
                                 <i class="fas fa-cog"></i>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                                     Compatible tous supports, tablette & application mobile.
                                 </div>
                             </div>
-                            <div class="rounded-full border-2 p-6 px-5 border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900">
+                            <div class="rounded-full border-2 p-6 px-5 border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
                                 <i class="fas fa-retweet"></i>
                             </div>
                         </div>
