@@ -1,9 +1,9 @@
 <template>
     <div id="competences" class="w-full z-20 relative py-16">
         <div class="flex flex-wrap justify-center relative">
-            <div class="absolute w-[2px] h-[80px] md:h-[150px] secondary -mt-[55px] md:-mt-10 z-20 top-0 left-[50%]"></div>
-            <div class="absolute left-[50%] bottom-0 w-[2px] h-[80px] md:h-[150px] secondary -mb-[20px] md:-mb-[100px] z-20"></div>
-            <div class="w-full md:w-1/2 darkest py-[80px] ">
+            <div class="absolute w-[1px] h-[80px] md:h-[200px] darker -mt-[75px] md:-mt-10 z-20  left-[50%]"></div>
+            
+            <div class="w-full md:w-1/2 darkest py-[120px] ">
                  <div class="absolute top-0 left-0 darkest w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
                 <div class="px-8 md:px-12 lg:px-[60px] xl:px-[80px] mb-10">
                     <Titre class="" title="Compétences" align="left" titleClass="text-dark" subtitle="Des compétences à votre service"/>
@@ -84,8 +84,6 @@
                 </div> 
             </div>
             <div class="w-full md:w-1/2 px-8 lg:px-[80px] xl:px-[120px] darker decale flex items-center py-[80px] pb-[120px] md:pb-24 relative">
-                <div class="absolute top-0 right-0 darkest w-1/2 h-[30px]  z-30 opacity-100 md:opacity-0"></div>
-                <div class="absolute bottom-0 left-0 dark w-1/2 h-[30px]  z-30 opacity-100 md:opacity-0"></div>
                 <div class="flex flex-wrap mt-5">
                     <div class="w-full text-left text-white">
                         <h6 class="text-xl xl:text-2xl   mb-5 text-secondary font-bold">Domaine de compétences</h6>

@@ -1,13 +1,12 @@
 <template>
   <div id="about" class=" w-full py-16">
     <div class="flex flex-wrap flex-col-reverse md:flex-row relative justify-center">
-      <div class="absolute w-[2px] h-[80px] md:h-[150px] secondary -mt-[55px] md:-mt-10 z-20 top-0 left-[50%]"></div>
-      <div class="absolute left-[50%] bottom-0 w-[2px] h-[80px] md:h-[150px] secondary -mb-[20px] md:-mb-[100px] z-20"></div>
+   
       <div class="w-full md:w-1/2 img-about grayscale h-[500px] md:h-auto relative">
         <div class="absolute top-0 right-0 darker w-1/2 h-[30px] z-30 opacity-100 md:opacity-0"></div>
         <div class="absolute bottom-0 dark w-1/2 h-[30px] z-30 opacity-100 md:opacity-0"></div>
       </div>
-      <div class="w-full md:w-1/2 darker decale px-8 sm:px-12 py-[80px] lg:py-[80px] xl:py-[130px] lg:px-[80px] xl:px-[130px]">
+      <div class="w-full md:w-1/2 darker decale px-8 sm:px-12 py-[80px] lg:py-[80px] xl:py-[180px] lg:px-[80px] xl:px-[130px]">
         <div class="absolute top-0 left-0 darker w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
         <mainTitle class="text-left" title="Qui suis-je ?" titleClass="text-dark" subtitle="En savoir plus sur l'artisan du web" /> 
         <p class="text-left mt-12 text-gray-400 lg:text-lg xl:text-xl md:text-md">
