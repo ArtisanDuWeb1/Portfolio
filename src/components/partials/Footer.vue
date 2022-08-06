@@ -1,6 +1,6 @@
 <template>
     <div class="w-full">
-        <footer class="">
+        <footer class="z-20 relative">
             <div class="flex justify-between flex-wrap-reverse">
                 <div class="darker w-full md:w-1/2 p-16 mt-0 md:-mt-12 relative">
                     <div @click="$parent.scrollTo('slider')" class="flex py-3 cursor-pointer items-center">

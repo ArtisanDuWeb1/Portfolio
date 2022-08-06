@@ -1,27 +1,54 @@
 <template>
-  <div id="about" class=" w-full py-16">
+  <div id="about" class=" w-full pt-16">
     <div class="flex flex-wrap flex-col-reverse md:flex-row relative justify-center">
-   
+      <div class="absolute w-[1px] h-[80px] md:h-[200px] darker -top-[30px] md:-mt-10 z-20  left-[50%]"></div>
+      <div class="absolute w-[1px] h-[100px] darker secondary -bottom-[120px] md:-mt-10 z-20  left-[50%] hidden md:block"></div>
       <div class="w-full md:w-1/2 img-about grayscale h-[500px] md:h-auto relative">
         <div class="absolute top-0 right-0 darker w-1/2 h-[30px] z-30 opacity-100 md:opacity-0"></div>
         <div class="absolute bottom-0 dark w-1/2 h-[30px] z-30 opacity-100 md:opacity-0"></div>
       </div>
-      <div class="w-full md:w-1/2 darker decale px-8 sm:px-12 py-[80px] lg:py-[80px] xl:py-[180px] lg:px-[80px] xl:px-[130px]">
+      <div class="w-full md:w-1/2 darker decale px-8 sm:px-12 py-[80px] lg:py-[140px] xl:py-[180px] lg:px-[80px] xl:px-[130px]">
         <div class="absolute top-0 left-0 darker w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
         <mainTitle class="text-left" title="Qui suis-je ?" titleClass="text-dark" subtitle="En savoir plus sur l'artisan du web" /> 
-        <p class="text-left mt-12 text-gray-400 lg:text-lg xl:text-xl md:text-md">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis metus eget elit pharetra finibus. Aenean mollis pulvinar eros, eget vehicula magna. 
+        <p class="text-left mt-12 text-gray-400  xl:text-lg text-md md:text-sm">
+          Jules Tonolo, 25 ans, développeur web et web mobile junior avec un profil full stack.
+          J'ai reçu, en 2019 par le biais de la formation Simplon, une certification Opquast avancée ainsi qu'un diplôme niveau bac+2 à ce titre.
           <br><br>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis metus eget elit pharetra finibus. Aenean mollis pulvinar eros, eget vehicula magna. 
-          Integer consequat, nisl eget cursus blandit, ex urna scelerisque est, nec tincidunt tortor dolor nec odio.
+          En 2021, je décide de créer ma micro-entreprise de développement web : l'Artisan du web.
+          Le terme artisan signifie beaucoup pour moi, car il représente parfaitement ce que j'affectionne dans le développement : 
+          le codage à la main et les projets sur mesure. Au fil des années, j'ai développé une véritable passion pour les nouvelles technologies
+          Internet, informatique en général et les défis qu'elles peuvent représenter. 
+          Désormais, l'envie de travailler en équipe a émergé. En effet, avide de progression, 
+          avoir l'opportunité d'échanger diverses connaissances dans ce domaine par le biais de réalisation de projets en commun, est une nouvelle source de motivation. 
         </p>
         <div class="mt-12">
-            <buttonMain :styleButton="1" text="En savoir plus"/>
+          <div @click="$parent.scrollTo('services')">
+            <Button color="dark" colorText="text-darkest" text="En savoir plus"/>
+          </div>
         </div>
       </div>     
     </div>
     <Services class="mt-14"></Services>
     <Competences></Competences>
+    <div class="darkest py-[150px] md:py-[200px]">
+        <div class="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
+            <h2 class="text-3xl font-bold text-black dark:text-white sm:text-4xl">
+                <span class="block">
+                    Envie de voir ce que ça donne ?
+                </span>
+                <span class="block text-secondary">
+                    C'est par ici que ca se passe.
+                </span>
+            </h2>
+            <div class="lg:mt-0 lg:flex-shrink-0">
+                <div class="mt-8 inline-flex rounded-md shadow">
+                  <div @click="$parent.swapToComponent('portfolio')">
+                    <Button color="dark" colorText="text-black" text="voir les projets"/>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -29,12 +56,12 @@
 import mainTitle from '../partials/Titre.vue'
 import Services from '../modules/Services.vue'
 import Competences from '../modules/Compétences.vue'
-import buttonMain from '../partials/Button.vue'
+import Button from '../partials/Button.vue'
 export default {
     name:"About",
     components:{
         mainTitle,
-        buttonMain,
+        Button,
         Competences,
         Services,
     }
@@ -43,7 +70,7 @@ export default {
 
 <style>
 .img-about{
-  background-image: url('https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_960_720.jpg');
+  background-image: url('../../../public/img/site/photo-about.jpg');
   background-position: center;
   background-size:cover;
   background-repeat:no-repeat;

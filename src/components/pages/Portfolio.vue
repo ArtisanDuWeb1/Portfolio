@@ -1,11 +1,10 @@
 <template>
-    <div id="portfolio" class="w-full flex flex-wrap relative justify-center mt-24">
-        <div class="absolute w-[2px] h-[150px] secondary -mt-10 z-20"></div>
-        
+    <div id="portfolio" class="w-full flex flex-wrap relative justify-center mt-24 relative">
+        <div class="absolute top-0 left-0 bg-gray-200 w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
         <div class="w-full flex">
             <div  class="w-full md:w-1/2 px-8 pb-16 bg-gray-200">
-                <div class="px-8 h-72 flex items-center">
-                    <Titre title="Les projets" :titleClass="'text-gray-400'" :dark="true" align="left" class="ml-12 mt-7"/>
+                <div class="px-0 md:px-4 lg:px-12 h-0 lg:h-72 md:h-44 flex items-center mt-28 mb-14 md:mt-0 md:mb-0">
+                    <Titre title="Les projets" :titleClass="'text-gray-400'" align="left" class="ml-2 md:ml-4 mt-0 md:mt-12"/>
                 </div>
             </div>
             <div  class="hidden md:flex md:w-1/2 0 mt-20 bg-gray-200">
@@ -13,28 +12,29 @@
         </div>   
         <div class="w-full pb-12 md:pb-32 bg-gray-200 px-8 -mt-6">
             <div id="gallery" class="flex flex-wrap">
-                <div @click="loadModal(item.id)" v-for="(item ,index) in projets" :id="'projet-'+ item.id" :key="index" :class="[numIsPair(index) ? 'md:pr-7' : 'md:mt-24 md:pl-7' ]" class="animate__slow opacity-0 pr-0 pl-0 w-full md:w-1/2 group  cursor-pointer transition-all easy-in-out duration-900 mb-24">
-                    <div :class="'hover:bg-' + item.color + '-300'" class="py-24  bg-gray-300 relative ">
+                <div @click="loadModal(item.id)" v-for="(item ,index) in projets" :id="'projet-'+ item.id" :key="index" :class="[numIsPair(index) ? 'md:pr-7' : 'md:mt-16 lg:mt-24 md:pl-7' ]" class="animate__slow opacity-0 pr-0 pl-0 w-full md:w-1/2 group  cursor-pointer transition-all easy-in-out duration-900 mb-24 md:mb-16 lg:mb-24">
+                    <div :class="'hover:bg-' + item.color + '-300'" class="py-24 lg:py-28 bg-gray-300 relative">
                         <div class="rounded-t-lg bg-gray-400 p-3 w-8/12 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-400'">
                             <img :src="'/img/projets/' + item.image[0]" alt="" class="w-full z-0"/>
                         </div>
                         <div class="rounded-b-lg w-9/12 h-4 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-500'"></div>
-                        <div class="absolute font-bold text-[2.5rem] bottom-0  text-gray-500 text-left z-30 ml-12 -mb-14">
+                        <div class="absolute font-bold text-[2rem] md:text-[2.5rem] bottom-0  text-gray-500 text-left z-30 ml-5 md:ml-12 -mb-12 md:-mb-14">
                             {{item.title}}
-                            <div class="text-2xl flex -mt-2 font-thin">
+                            <div class="text-xl md:text-2xl flex -mt-2 font-thin">
                                 <span class="mr-2 ">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none">
                                         <path d="M20 19H4C2.9 19 2 18.1 2 17H22C22 18.1 21.1 19 20 19Z" fill="#5a832f"/>
                                         <path opacity="0.3" d="M20 5H4C3.4 5 3 5.4 3 6V17H21V6C21 5.4 20.6 5 20 5Z" fill="#7cb342"/>
                                     </svg>
-                                </span>{{item.category}}
+                                </span>
+                                {{item.category}}
                             </div>
                         </div>      
                     </div>
                 </div>
             </div>
         </div>
-        <ProjectModal v-show="modal"></ProjectModal>
+        <ProjectModal v-show="modal==true"></ProjectModal>
     </div> 
 </template>
 
@@ -58,6 +58,7 @@ export default {
             indexModal:0,
             modal:false,
             mute:false,
+            loader:true,
             animated:[],
             projets:[
                 {
@@ -80,6 +81,7 @@ export default {
                         'capture-portfolio.png',
                         ],
                     color:'green',
+                    link:'ok',
                 },
                 {
                     id:"1",
@@ -121,7 +123,7 @@ export default {
                         "carologie.png"
                     ],
                     color:'red',
-                    
+                    link:'',
                 },
                 {
                     id:"3",
@@ -176,11 +178,12 @@ export default {
             const scrollY= window.scrollY;
             this.mute=true;
             if(this.modal){
+                document.getElementById('full-modal').scrollTop=0;
                 this.$parent.animateCSS('#modal', 'fadeOutRight').then((message) => {
                     if(message == "Animation ended"){
                         const topY = document.body.style.top;
-                        this.modal = !this.modal
-                        document.body.style.position = ""
+                        this.modal = !this.modal;
+                        document.body.style.position = "";
                         document.body.style.top = "";
                         document.body.style.paddingRight = "0px";
                         window.scrollTo(0, parseInt(topY || '0') * -1)
@@ -189,11 +192,17 @@ export default {
                 })
             }else{
                 this.modal = !this.modal
-                this.$parent.animateCSS('#modal', 'fadeInRight');
+                document.getElementById('full-modal').scrollTop=0;
+                this.loader=true;
                 document.body.style.position = "fixed";
                 document.body.style.top = "-" +  scrollY + "px";
-                document.body.style.paddingRight = "15px"; 
-                this.mute=false;
+                document.body.style.paddingRight = "15px";
+                this.$parent.animateCSS('#modal', 'fadeInRight').then((message) => {
+                    if(message == "Animation ended"){
+                        this.mute=false;
+                        setTimeout(this.switchLoader, 400);
+                    }
+                })
             }
         },
         loadModal(id){
@@ -202,9 +211,11 @@ export default {
                 this.toggleModal();
             } 
         },
+        switchLoader(){
+            this.loader= !this.loader;
+        },
         handleScroll(){
             const gallery = document.getElementById('gallery').children;
-            
             for (let i = 0; i < gallery.length; i++) {
                 if(gallery[i].offsetTop +300 < window.scrollY && this.animated.findIndex(element => element == gallery[i].id) == -1){
                     this.$parent.animateCSS('#'+ gallery[i].id, 'fadeIn').then((message) => {

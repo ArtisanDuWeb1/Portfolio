@@ -1,27 +1,30 @@
 <template>
     <div id="services" class="z-10 py-4 md:py-24 ">
         <mainTitle title="Mes services" subtitle="Des prestations adaptées à vos besoins" align="center" titleClass="text-darkest" class="z-10 mt-10 " />
-        <div class="w-full pt-6 pb-0 ">
-            
+        <div class="w-full pt-6 pb-0">
             <kinesis-container class="w-full sm:w-full px-0 md:px-4 lg:px-0  lg:w-11/12 xl:w-10/12 mx-auto">
                 <div class="flex justify-center py-12 flex-wrap relative items-center z-10">
                     <div class="w-11/12 sm:w-11/12 md:w-1/2 mx-auto md:p-0 z-10">
                         <div class="flex group items-center mx-auto ">
-                            <div class="mr-4 rounded-full border-2 p-6 border-black flex items-center justify-center text-lg lg:text-xl xl:text-2xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
-                                <i class="fas fa-project-diagram"></i>
+                            <div class="">
+                                <div class="mr-4 w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center text-lg lg:text-xl text-secondary bg-black relative">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
                             </div>
                             <div class="">
                                 <h6 class="uppercase text-lg lg:text-xl text-black font-bold text-left">Gestion de projets web</h6>
                                 <div class="text-md lg:text-lg text-gray-300 text-left text-shadow">
-                                    Site vitrine, corporate, évènementiel e-commerce, intranet, application mobile
+                                    Site vitrine, corporate, évènementiel e-commerce, intranet
                                 </div>
                             </div>
                         </div>
                         <div class="flex group items-center mt-8 mx-auto">
-                            <div class="mr-4 rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
-                                <i class="fas fa-edit"></i>
+                            <div class="">
+                                <div class="mr-4 w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center text-lg lg:text-xl text-secondary bg-black">
+                                    <i class="fas fa-edit"></i>
+                                </div>
                             </div>
-                            <div class="ml-4">
+                            <div class="">
                                 <h6 class="uppercase text-lg lg:text-xl text-black font-bold text-left">Intégration Web</h6>
                                 <div class="text-md lg:text-lg text-gray-300 text-left text-shadow">
                                     Des intégrations HTML / CSS respectueuses des standards du Web
@@ -29,10 +32,13 @@
                             </div>
                         </div>
                         <div class="flex group items-center mt-8 mx-auto">
-                            <div class="mr-4 rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
-                                <i class="fas fa-wrench"></i>
+                            <div class="">
+                                <div class="mr-4 w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center text-lg lg:text-xl text-secondary bg-black">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
                             </div>
-                            <div class="ml-4">
+                            
+                            <div class="">
                                 <h6 class="uppercase text-lg lg:text-xl text-black font-bold text-left">Développements spécifiques</h6>
                                 <div class="text-md lg:text-lg text-gray-300 text-left text-shadow">
                                     Des outils adaptés à votre coeur de métier, applications & solutions personnalisées.
@@ -40,10 +46,12 @@
                             </div>
                         </div>
                         <div class="flex group items-center mt-8 mx-auto ">
-                            <div class="mr-4 rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
-                                <i class="fas fa-check"></i>
+                            <div class="">
+                                <div class="mr-4 w-16 h-16 lg:w-20 lg:h-20 rounded-full flex items-center justify-center text-lg lg:text-xl  text-secondary bg-black">
+                                    <i class="fas fa-check"></i>
+                                </div>
                             </div>
-                            <div class="ml-4">
+                            <div class="">
                                 <h6 class="uppercase text-lg lg:text-xl text-black font-bold text-left ">Référencement naturel</h6>
                                 <div class="text-md lg:text-lg text-gray-300 text-left text-shadow">
                                     Affichage sémantique des informations, des pages propres pour un référencement optimal.
@@ -59,8 +67,10 @@
                                     Logos, templates Web, plaquettes publicitaires, cartes de visite, newsletters...
                                 </div>
                             </div>
-                            <div class="rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
-                                <i class="fas fa-pen"></i>
+                            <div class="">
+                                <div class="rounded-full w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center text-lg lg:text-xl text-secondary bg-black">
+                                    <i class="fas fa-pen"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="flex group items-center flex-row-reverse sm:flex-row-reverse md:flex-row mt-8 rounded justify-end">
@@ -70,9 +80,12 @@
                                     Des animations de contenu non intrusives pour embellir votre projet.
                                 </div>
                             </div>
-                            <div class="rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
-                                <i class="fas fa-sync-alt"></i>
+                            <div class="">
+                                <div class="rounded-full w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center text-lg lg:text-xl text-secondary bg-black">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
                             </div>
+                              
                         </div>
                         <div class="flex group items-center flex-row-reverse sm:flex-row-reverse md:flex-row mt-8 rounded justify-end">
                             <div class="mr-0 md:mr-4 ml-4 md:ml-0 text-left sm:text-left md:text-right">
@@ -81,8 +94,10 @@
                                     Outils spécifiques au bon fonctionnement de votre entreprise.
                                 </div>
                             </div>
-                            <div class="rounded-full border-2 p-6  border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
-                                <i class="fas fa-cog"></i>
+                            <div class="">
+                                 <div class="rounded-full w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center text-lg lg:text-xl text-secondary bg-black">
+                                    <i class="fas fa-cog"></i>
+                                </div>
                             </div>
                         </div>
                         <div class="flex group items-center justify-end flex-row-reverse sm:flex-row-reverse md:flex-row mt-8 rounded">
@@ -92,12 +107,15 @@
                                     Compatible tous supports, tablette & application mobile.
                                 </div>
                             </div>
-                            <div class="rounded-full border-2 p-6 px-5 border-black flex items-center justify-center text-lg lg:text-xl xl:text-3xl text-secondary group-hover:bg-black transition-all easy-in duration-900 md:bg-transparent bg-black">
-                                <i class="fas fa-retweet"></i>
+                            <div class="">
+                                <div class="rounded-full w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center text-lg lg:text-xl text-secondary bg-black">
+                                    <i class="fas fa-retweet"></i>
+                                </div>
                             </div>
+                           
                         </div>
                     </div>
-                    <kinesis-element tag="div" :strength="30" originX="50" class="absolute w-full sm:w-full md:w-1/2 xl:w-4/12 z-0 opacity-0 md:opacity-25" type="depth">
+                    <kinesis-element tag="div" :strength="30" originX="50" class="absolute w-full sm:w-full md:w-1/3 xl:w-4/12 z-0 opacity-0 lg:opacity-25" type="depth">
                         <img src="img/site/iphonelogo.png" class="" alt="">
                     </kinesis-element>                   
                 </div>

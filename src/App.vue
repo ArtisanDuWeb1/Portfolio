@@ -1,7 +1,6 @@
 <template>
   <div id="app" class="dark z-0" :class="{'h' : modal}">
     <NavBar/>
-    
     <Slider/>
     <component :is="currentTab"></component>
     <Footer/>
@@ -16,6 +15,7 @@ import Portfolio from './components/pages/Portfolio.vue'
 import Contact from './components/pages/Contact.vue'
 import Footer from './components/partials/Footer.vue'
 import About from './components/pages/About.vue'
+import Home from './components/pages/Home.vue'
 
 export default {
   name: 'App',
@@ -25,7 +25,8 @@ export default {
     Portfolio,
     Contact,
     Footer,
-    About
+    About,
+    Home
   },
   data() {
       return {
@@ -56,6 +57,7 @@ export default {
       if(component != this.currentTab && this.mute===false){
         window.scroll({
           top: 0,
+          behavior:'smooth',
         });
         this.animateCSS('#header-text', 'fadeOut').then((message) => {
           if(message == "Animation ended"){
@@ -96,9 +98,15 @@ export default {
         }
       });
     },
-
+    scrollScreen(){
+      const el = screen.height-130;
+      window.scroll({
+        top: el,
+        behavior: "smooth"
+      })
+    },
     scrollTo(id){
-      const el = document.getElementById(id).offsetTop -120;
+      const el = document.getElementById(id).offsetTop;
       window.scroll({
         top: el,
         behavior: "smooth"
@@ -129,10 +137,10 @@ export default {
   background-color: #5a832f;
 }
 .text-secondary{
-  color: #7cb342;
+  color: #5a832f;
 }
 .border-secondary{
-  border-color:#7cb342 ;
+  border-color:#5a832f;
 }
 .dark{
     background-color:#1b1d1f;
