@@ -31,7 +31,7 @@
                 <p class="mb-8 leading-relaxed text-gray-300">
                     Ce dernier est développé avec VueJs et vous permet d'en apprendre un peu plus sur moi et sur ce que je sais faire.
                     <br>
-                    Je vous souhaite une agréable visite et reste à votre dispition pour toutes informations complémentaires.
+                    Je vous souhaite une agréable visite et reste à votre disposition pour toutes informations complémentaires.
                </p>
                 <div class="flex justify-center flex-wrap">
                     <a @click="$parent.swapToComponent('about')" class="mt-4 ml-2">

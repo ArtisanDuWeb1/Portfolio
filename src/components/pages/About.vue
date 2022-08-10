@@ -3,14 +3,15 @@
     <div class="flex flex-wrap flex-col-reverse md:flex-row relative justify-center">
       <div class="absolute w-[1px] h-[80px] md:h-[200px] darker -top-[30px] md:-mt-10 z-20  left-[50%]"></div>
       <div class="absolute w-[1px] h-[100px] darker secondary -bottom-[120px] md:-mt-10 z-20  left-[50%] hidden md:block"></div>
-      <div class="w-full md:w-1/2 img-about grayscale h-[500px] md:h-auto relative">
+      <div class="w-full md:w-1/2   h-[500px] md:h-auto relative">
+        <div class="grayscale img-about h-full"></div>
         <div class="absolute top-0 right-0 darker w-1/2 h-[30px] z-30 opacity-100 md:opacity-0"></div>
         <div class="absolute bottom-0 dark w-1/2 h-[30px] z-30 opacity-100 md:opacity-0"></div>
       </div>
-      <div class="w-full md:w-1/2 darker decale px-8 sm:px-12 py-[90px] xl:py-[150px] lg:px-[60px] xl:px-[100px]">
+      <div class="w-full md:w-1/2 darker decale px-8 sm:px-12 md:px-8 py-[90px] md:py-[60px] lg:py-[80px] xl:py-[100px] 2xl:py-[150px] lg:px-[60px] 2xl:px-[100px]">
         <div class="absolute top-0 left-0 darker w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
         <mainTitle class="text-left" title="Qui suis-je ?" titleClass="text-dark" subtitle="En savoir plus sur l'artisan du web" /> 
-        <p class="text-left mt-12 text-gray-400  xl:text-lg text-md md:text-sm">
+        <p class="text-left mt-12 text-gray-400 xl:text-md 2xl:text-lg text-md md:text-sm ">
           Jules Tonolo, 25 ans, développeur web et web mobile junior avec un profil full stack.
           J'ai reçu, en 2019 par le biais de la formation Simplon, une certification Opquast avancée ainsi qu'un diplôme niveau bac+2 à ce titre.
           <br><br>
@@ -42,7 +43,7 @@
             </h2>
         </div>
         <div class="lg:mt-0 lg:flex-shrink-0">
-            <div class="mt-8 inline-flex rounded-md ">
+            <div class="inline-flex rounded-md ">
               <a @click="$parent.swapToComponent('portfolio')">
                 <mainButton color="dark" colorText="text-black dark" text="Voir les projets"/>
               </a>

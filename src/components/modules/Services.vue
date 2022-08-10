@@ -1,8 +1,8 @@
 <template>
-    <div id="services" class="z-10 py-4 md:py-24 ">
+    <div id="services" class="z-10 py-4 md:py-20 lg:py-24 ">
         <mainTitle title="Mes services" subtitle="Des prestations adaptées à vos besoins" align="center" titleClass="text-darkest" class="z-10 mt-10 " />
         <div class="w-full pt-6 pb-0">
-            <kinesis-container class="w-full sm:w-full px-0 md:px-4 lg:px-0  lg:w-11/12 xl:w-10/12 mx-auto">
+            <kinesis-container class="w-full sm:w-full px-0 md:px-4 lg:px-0  lg:w-11/12 2xl:w-10/12 mx-auto">
                 <div class="flex justify-center py-12 flex-wrap relative items-center z-10">
                     <div class="w-11/12 sm:w-11/12 md:w-1/2 mx-auto md:p-0 z-10">
                         <div class="flex group items-center mx-auto ">

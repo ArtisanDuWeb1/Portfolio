@@ -7,12 +7,12 @@
             <div class="absolute top-0 right-0 darker w-1/2 h-[30px]  z-30 opacity-100 md:opacity-0"></div>
             <div class="img-contact grayscale w-full h-full"></div>
         </div>
-        <div class="w-full md:w-1/2 darker decale  px-8 sm:px-12 py-[110px] lg:py-[80px] xl:py-[130px] lg:px-[60px] xl:px-[130px]">
+        <div class="w-full md:w-1/2 darker decale  px-8 sm:px-12 py-[80px] lg:py-[100px] xl:py-[120px] 2xl:py-[150px] lg:px-[80px] xl:px-[100px] 2xl:px-[130px]">
             <div class="absolute bottom-0 left-0 darkest w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
-            <mainTitle title="Contactez-moi" class="mb-16" titleClass="text-dark" align="mix"/>
+            <mainTitle title="Contactez-moi" class="mb-16" titleClass="text-dark" align="left"/>
             <div class="flex justify-center md:justify-start flex-wrap flex-col">
                 <div class="absolute top-0 right-0 dark w-1/2 h-[30px]  z-30 opacity-100 md:opacity-0"></div>
-                <div class="text-left ml-5 md:ml-7">
+                <div class="text-left ml-4 md:ml-0">
                     <div class="py-3 text-white weight-regular">
                         <div class="font-bold text-xl flex items-center">
                             <div class="flex justify-center items-center w-16 h-16 dark rounded-full">
@@ -46,14 +46,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="flex mt-16 text-4xl text-gray-300 justify-center md:justify-start">
-                    <a href="https://github.com/ArtisanDuWeb1" target="_blank" class="mr-5">
-                        <i class="fab fa-github-square  hover:scale-125 opacity-75 hover:opacity-100 transition-all easy-in"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/jules-tonolo-646693185/" target="_blank" class="mr-5">
-                        <i class="fab fa-linkedin hover:scale-125 opacity-75 hover:opacity-100 transition-all easy-in"></i>
-                    </a>
                 </div>
             </div>
         </div>

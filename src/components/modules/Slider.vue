@@ -6,14 +6,14 @@
                     <div class="h-8 w-8 md:w-12 md:h-12 darker flex items-center justify-center rounded-full">
                         <i class="fas fa-code-branch"></i>
                     </div>
-                    <div class="my-auto  ml-2 md:ml-3 text-md md:text-xl text-gray-300 relative" >
+                    <div class="my-auto ml-2 md:ml-3 text-md md:text-xl text-gray-300 relative" >
                         <a :href="commitLink" target="_blank" class="font-bold cursor-pointer commit_link">Dernier commit</a> : {{lastCommit}}
                     </div>
                 </div>
             </div>
         </div>
-        <div @click="$parent.scrollScreen" class="absolute z-30 right-auto md:right-[2px] lg:right-[28px] bottom-[44px] text-xl w-full md:w-auto flex justify-center animate__animated animate__fadeInRight animate__delay-5s">
-            <div class="text-gray-300 leading-[24px] text-sm uppercase p-3 button-scroll cursor-pointer transition-all easy-in-out  items-center ">
+        <div @click="$parent.scrollScreen" class="absolute z-30 right-auto md:right-[2px] lg:right-[28px] bottom-[48px] text-xl w-full md:w-auto flex justify-center animate__animated animate__fadeInRight animate__delay-5s">
+            <div class="text-gray-300 leading-[23px] text-md md:text-[0.8rem] uppercase p-3 button-scroll cursor-pointer transition-all easy-in-out  items-center ">
                 <span>V<br class="hidden md:block">o<br class="hidden md:block">i<br class="hidden md:block">r<br class="hidden md:block"> <br class="hidden md:block">p<br class="hidden md:block">l<br class="hidden md:block">u<br class="hidden md:block">s</span>
                 <div class="h-12 w-12 darker flex items-center justify-center rounded-full mt-2 md:mt-3 mx-auto">
                     <i class="fas fa-angle-down"></i>
@@ -25,10 +25,10 @@
   
             <kinesis-element :strength="8" :originX="0"  class="relative flex w-full justify-center h-full items-center z-20" type="translate">
                 <div class=" mx-auto  px-8">
-                    <h1 id="header-subtitle" v-html="subtitles[getTabIndex]" class="opacity-0 text-4xl lg:text-5xl xl:text-6xl text-white text-shadow text-left md:text-center animate__delay-4s"></h1>
+                    <h1 id="header-subtitle" v-html="subtitles[getTabIndex]" class="opacity-0 text-4xl lg:text-5xl  text-white text-shadow text-left md:text-center animate__delay-4s"></h1>
                 </div>
             </kinesis-element>
-            <kinesis-element :strength="5" :originX="5" id="swapper-title"  class="bebas text-[6rem] md:text-[9rem] xl:text-[16rem] absolute font-bold leading-[7rem] md:leading-[12rem] lg:leading-[14rem] xl:leading-[16rem] z-10 text-darker my-auto" type="translate">
+            <kinesis-element :strength="5" :originX="5" id="swapper-title"  class="bebas text-[6rem] md:text-[9rem] xl:text-[10rem] 2xl:text-[13rem] absolute font-bold leading-[7rem] md:leading-[11rem] xl:leading-[12rem] z-10 text-darker my-auto" type="translate">
                     <div id="header-title-1" class="relative text-left">
                         <div id="header-cover-title-1" v-html="titles1[getTabIndex]" class="absolute darkest  text-transparent opacity-100">
                         </div>   
@@ -147,12 +147,18 @@ export default {
 }
 
 
-@media (max-width: 320px) {
+@media (max-width: 380px) {
     #swapper-title{
         font-size:4rem;
     }
     #header-subtitle{
         font-size:1.8rem;
+    }
+    #modal-banner{
+        height:200px;
+    }
+    #modal-computer{
+        margin-top:-80px;
     }
   }
 </style>
