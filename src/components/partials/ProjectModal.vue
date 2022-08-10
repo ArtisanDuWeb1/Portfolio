@@ -13,13 +13,13 @@
                     <i class="fas fa-times"></i>
                 </div>
                 <div id="modal-banner" class="dark relative flex items-center justify-center h-[280px] md:h-[400px] lg:h-[350px] px-5 ">
-                    <h4 class="text-8xl md:text-9xl bebas text-darker text-center mb-4 z-40">{{$parent.projets[$parent.indexModal].title}}</h4>
+                    <h4 class="text-7xl sm:text-7xl md:text-9xl bebas text-darker text-center mb-4 z-40">{{$parent.projets[$parent.indexModal].title}}</h4>
                 </div>
                  <div  id="modal-computer" class="md:-mt-[180px] lg:-mt-[160px] -mt-[120px] relative z-40">
                     <div class="rounded-t-lg bg-gray-400 p-2 md:p-3 w-8/12 md:w-6/12 mx-auto transition-all easy-in-out duration-900 bg-gray-400 ">
                         <img :src="'/img/projets/' + $parent.projets[$parent.indexModal].image[0]" alt="" class="w-full z-0"/>
                     </div>
-                    <div class="rounded-b-lg w-9/12 md:w-7/12 h-2 md:h-4 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900 bg-gray-500"></div>
+                    <div class="rounded-b-lg w-9/12 md:w-7/12 h-3 md:h-4 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900 bg-gray-500"></div>
                 </div>
                 <div class="flex flex-wrap weight-regular text-black text-left mt-12 relative z-20">
                     <div class="w-full p-1 text-center">

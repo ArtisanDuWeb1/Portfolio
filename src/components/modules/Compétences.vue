@@ -19,13 +19,13 @@
                             <div class="text-3xl lg:text-5xl text-white opacity-50 group-hover:opacity-100 transition-all easy-in">
                                 <i class="fab fa-html5"></i>
                             </div>
-                            <span class="font-bold text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">HTML5</span>
+                            <span class="text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">HTML5</span>
                         </div>
                         <div class="flex flex-col group mr-6 hover:scale-110 transition-all easy-in mt-3">
                             <div class="text-3xl lg:text-5xl text-white opacity-50 group-hover:opacity-100 transition-all easy-in">
                                 <i class="fab fa-css3-alt"></i>
                             </div>
-                            <span class="font-bold text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">CSS3</span>
+                            <span class="text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">CSS3</span>
                         </div>
                         <div class="flex flex-col group mr-6 hover:scale-110 transition-all easy-in mt-3">
                             <div class="text-3xl lg:text-5xl text-white opacity-50 group-hover:opacity-100 transition-all easy-in">
@@ -64,19 +64,19 @@
                             <div class="text-6xl text-white opacity-50 group-hover:opacity-100 transition-all easy-in">
                                 <img src="img/icons/ps-logo.png" class="w-[40px] mx-auto"/>
                             </div>
-                            <span class="font-bold text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">Photoshop</span>
+                            <span class="text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">Photoshop</span>
                         </div>
                         <div class="flex flex-col group mr-6 hover:scale-110 transition-all easy-in justify-center mt-3">
                             <div class="text-6xl text-white opacity-50 group-hover:opacity-100 transition-all easy-in">
                                 <img src="img/icons/illustartor-logo.png" class="w-[40px] mx-auto"/>
                             </div>
-                            <span class="font-bold text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">illustrator</span>
+                            <span class="text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">illustrator</span>
                         </div>
                         <div class="flex flex-col group mr-6 hover:scale-110 transition-all easy-in justify-center mt-3">
                             <div class="text-6xl text-white opacity-50 group-hover:opacity-100 transition-all easy-in">
                                 <img src="img/icons/in-logo.png" class="w-[40px] mx-auto"/>
                             </div>
-                            <span class="font-bold text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">inDesign</span>
+                            <span class="text-gray-400 mt-2 group-hover:text-gray-300 transition-all easy-in uppercase text-sm">inDesign</span>
                         </div> 
                     </div>
                 </div> 
@@ -85,7 +85,7 @@
             <div class="absolute top-0 left-0 darker w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
             <div class="absolute bottom-0 left-0 darkest w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
                 <div class="flex flex-wrap mt-5">
-                    <div class="w-full text-left text-white">
+                    <div class="w-full text-left text-gray-300">
                         <h6 class="text-xl xl:text-2xl   mb-5 text-secondary font-bold">Domaine de compétences</h6>
                         <div class="flex items-center">
                             <div class="">

@@ -10,15 +10,15 @@
             <div  class="hidden md:flex md:w-1/2 0 mt-20 bg-gray-200">
             </div>
         </div>   
-        <div class="w-full pb-12 md:pb-32 bg-gray-200 px-8 -mt-6">
+        <div class="w-full pb-12 md:pb-32 bg-gray-200 px-4 sm:px-8 -mt-6">
             <div id="gallery" class="flex flex-wrap">
-                <div @click="loadModal(item.id)" v-for="(item ,index) in projets" :id="'projet-'+ item.id" :key="index" :class="[numIsPair(index) ? 'md:pr-7' : 'md:mt-16 lg:mt-24 md:pl-7' ]" class="animate__slow opacity-0 pr-0 pl-0 w-full md:w-1/2 group  cursor-pointer transition-all easy-in-out duration-900 mb-24 md:mb-16 lg:mb-24">
+                <div @click="loadModal(item.id)" v-for="(item ,index) in projets" :id="'projet-'+ item.id" :key="index" :class="[numIsPair(index) ? 'md:pr-7' : 'md:mt-16 lg:mt-18 md:pl-7' ]" class="animate__slow opacity-0 pr-0 pl-0 w-full md:w-1/2 group  cursor-pointer transition-all easy-in-out duration-900 mb-24 md:mb-16 lg:mb-24">
                     <div :class="'hover:bg-' + item.color + '-300'" class="py-24 lg:py-28 bg-gray-300 relative">
-                        <div class="rounded-t-lg bg-gray-400 p-3 w-8/12 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-400'">
+                        <div class="rounded-t-lg bg-gray-400 p-2 xl:p-3 w-10/12 lg:w-9/12 2xl:w-8/12 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-400'">
                             <img :src="'/img/projets/' + item.image[0]" alt="" class="w-full z-0"/>
                         </div>
-                        <div class="rounded-b-lg w-9/12 h-4 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-500'"></div>
-                        <div class="absolute font-bold text-[2rem] md:text-[2.5rem] bottom-0  text-gray-500 text-left z-30 ml-5 md:ml-12 -mb-12 md:-mb-14">
+                        <div class="rounded-b-lg w-11/12 lg:w-10/12 2xl:w-9/12 h-2 md:h-3 xl:h-4 bg-gray-500 group-hover:bg-green-500 mt-1 mx-auto transition-all easy-in-out duration-900" :class="'group-hover:bg-' + item.color + '-500'"></div>
+                        <div class="absolute font-bold text-[2rem] md:text-[2.2rem] lg:text-[2.5rem]  bottom-0  text-gray-500 text-left z-30 ml-5 lg:ml-7 -mb-12 md:-mb-14">
                             {{item.title}}
                             <div class="text-xl md:text-2xl flex -mt-2 font-thin">
                                 <span class="mr-2 ">

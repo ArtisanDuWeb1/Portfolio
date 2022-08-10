@@ -12,7 +12,7 @@
             <mainTitle title="Contactez-moi" class="mb-16" titleClass="text-dark" align="left"/>
             <div class="flex justify-center md:justify-start flex-wrap flex-col">
                 <div class="absolute top-0 right-0 dark w-1/2 h-[30px]  z-30 opacity-100 md:opacity-0"></div>
-                <div class="text-left ml-4 md:ml-0">
+                <div class="text-left ml-3 sm:ml-12 md:ml-0">
                     <div class="py-3 text-white weight-regular">
                         <div class="font-bold text-xl flex items-center">
                             <div class="flex justify-center items-center w-16 h-16 dark rounded-full">

@@ -8,11 +8,11 @@
                     <p class="leading-relaxed">Projets achevés</p>
                 </div>
                 <div class="p-4 sm:w-1/4 w-1/2">
-                    <h2 class="title-font font-semibold sm:text-4xl text-3xl text-secondary">+12K</h2>
+                    <h2 class="title-font font-semibold sm:text-4xl text-3xl text-secondary">+8K</h2>
                     <p class="leading-relaxed">heures passées à coder</p>
                 </div>
                 <div class="p-4 sm:w-1/4 w-1/2">
-                    <h2 class="title-font font-semibold sm:text-4xl text-3xl text-secondary">+2k</h2>
+                    <h2 class="title-font font-semibold sm:text-4xl text-3xl text-secondary">+1k</h2>
                     <p class="leading-relaxed">Bugs résolus</p>
                 </div>
                 <div class="p-4 sm:w-1/4 w-1/2">
