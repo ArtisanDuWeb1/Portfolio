@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="../favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>L'Artisan du Web - Jules Tonolo</title>
+  </head>
+  <body class="w-screen h-screen dark ">
+    <div class="h-full w-full flex justify-center items-center flex-col text-center">
+        <h2 class="bebas text-[12rem] text-darkest">4<span class="text-secondary">0</span>4</h2>
+        <span class=" text-3xl lg:text-4xl text-darkest px-4 font-bold -mt-10">Oups ! Page inconue</span>
+        <p class="text-2xl mt-3 text-gray-400 px-4">Désolé mais la page recherchée n'existe  pas sur ce serveur.</p>
+        <a href="http://julestonolo-artisanduweb.fr/" class="flex group cursor-pointer mt-10 darkest" >
+            <button class="custom-button relative px-12 py-5 flex justify-center transition-all easy-in-out duration-700">
+                <div class="slice-button h-full w-1/2 absolute left-0 top-0  group-hover:-translate-y-1 transition-all easy-in-out duration-700" ></div>
+                <div class="slice-button h-full w-1/2 absolute right-0 top-0 group-hover:translate-y-1 transition-all easy-in-out duration-700" ></div>
+                <span class="relative uppercase font-semibold transition-all easy-in text-gray-400 group-hover:text-black">Retour à l'accueil</span>
+            </button>
+        </a>
+    </div>  
+  </body>
+</html>
+<style>
+    .secondary{
+        background-color: #5a832f;
+    }
+    .text-secondary{
+        color: #5a832f;
+    }
+    .dark{
+        background-color:#1b1d1f;
+    }
+    .darker{
+        background-color: #0f1011;
+    }
+    .darkest{
+        background-color:#0a0a0b;
+    }
+    .text-dark{
+        color:#1b1d1f;
+    }
+    .text-darker{
+        color:#0f1011;
+    }
+    .text-darkest{
+        color:#0a0a0b;
+    }
+    .bebas{
+        font-family: 'Bebas Neue', cursive;
+    }
+    body{
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight:100;
+    }
+    .custom-button:hover>.slice-button{
+        background-color:#5a832f;
+    }
+    .custom-button:hover{
+        background-color:#5a832f;
+    }
+</style>
