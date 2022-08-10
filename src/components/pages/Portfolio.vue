@@ -64,108 +64,95 @@ export default {
                 {
                     id:"0",
                     title: "lsroleplay",
-                    category: "Web App",
+                    category: "Site web / Web App",
                     labels:[
                         'laravel',
-                        'php',
-                        'vuejs'
+                        'vuejs',
+                        'bootstrap'
                     ],
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent egestas libero ipsum, et pulvinar sem fringilla id. Cras lobortis nulla ante, et finibus libero convallis eget. Pellentesque ultricies libero tellus.',
-                    tasks:[
-                        "Création d'un logo et d'illustrations (Illustrator)",
-                        "Conception graphique & Webdesign (Photoshop)",
-                        "Développement sous Laravel - MySQL",
-                        "Interface d'administration",
-                    ],
+                    description: "C'est un projet qui vise à créer un serveur GTA role play via la plateforme FiveM. Il comprend une partie game mod développée en NextJs ainsi qu'une web app développée en Laravel et VueJs. L'équipe pour le réaliser est composée de 5 développeurs : 3 pour le game mod et 2 pour la partie web dont je fais partie. Le projet est encore en cours de développement.",
                     image:[
-                        'capture-portfolio.png',
+                        'lsroleplay.png',
                         ],
-                    color:'green',
-                    link:'ok',
+                    color:'purple',
+                    link:'',
                 },
                 {
                     id:"1",
                     title: "l'Artisan du Web",
                     category: "Site web",
                     labels:[
-                        'laravel',
-                        'php',
-                        'vuejs'
+                        'vuejs',
+                        'GitHub API',
+                        'tailwindCSS'
                     ],
-                    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent egestas libero ipsum, et pulvinar sem fringilla id. Cras lobortis nulla ante, et finibus libero convallis eget. Pellentesque ultricies libero tellus.',
-                    tasks:[
-                        "Création d'un logo et d'illustrations (Illustrator)",
-                        "Conception graphique & Webdesign (Photoshop)",
-                        "Développement sous Laravel - MySQL",
-                        "Interface d'administration",
-                    ],
+                    description: "Ce projet est le site que vous êtes en train de visiter, il a été développé avec VueJs, TailwindCSS et Github API. Il comprend actuellement la partie front-end de l'application, j'ai pour projet de le compléter avec une partie back-end qui permettra par la suite la gestion des mails et des projets.",
                     image:[
-                        'capture-portfolio.png',
+                        'artisanduweb.png',
                         ],
                     color:'green',
                 },
                 {
                     id:"2",
-                    title: "Carologie",
-                    category: "Site web",
-                    labels:[
-                        'PHP',
-                        'HTML/CSS'
-                    ],
-                    description: "J'ai réalisé ce projet en août 2019 lors d'un hackaton qui se déroulait dans l'incubateur RimbaudTech à Charleville-Mézières. L'objectif du concours était d'utiliser une base de données construite à partir d'études démographiques et historiques de Charleville, effectuées par les chercheurs du CNRS de la Sorbonne à Paris, pour créer un site ou une application originale. Nous avons donc proposé Carologie qui est un projet de site internet accessible sur tout support permettant de savoir qui habitait à l'adresse que vous renseignez à la période que vous sélectionnez. Elle donne également des stastistiques sur les voisins et les gens du quartier à la même époque. Le projet est arrivé en 2ème position.",
-                    tasks:[
-                        "Création d'un logo et d'illustrations (Illustrator)",
-                        "Conception graphique & Webdesign (Photoshop)",
-                        "Développement sous Laravel - MySQL",
-                        "Interface d'administration",
-                    ],
-                    image:[
-                        "carologie.png"
-                    ],
-                    color:'red',
-                    link:'',
-                },
-                {
-                    id:"3",
                     title: "Biskit",
                     category: "Site web",
                     labels:[
-                        'laravel',
-                        'php',
-                        'vuejs'
+                        'VueJs',
+                        'Bootstrap'
                     ],
-                    description: "Ce projet est la version améliorée d'un exercice scolaire réalisé lors de ma formation. Je l'ai repris en utilisant VueJs ainsi que VueCli pour la première fois. J'envisage de le déployer en application mobile à l'aide de Vue native.",
-                    tasks:[
-                        "Création d'un logo et d'illustrations (Illustrator)",
-                        "Conception graphique & Webdesign (Photoshop)",
-                        "Développement sous Laravel - MySQL",
-                        "Interface d'administration",
-                    ],
+                    description: "Ce projet est la version améliorée d'un exercice scolaire réalisé lors de ma formation. Je l'ai repris en utilisant VueJs ainsi que VueCli.",
                     image:[
                         "biskit1.png"
                     ],
                     color:'blue',
-                    
+                    link:'http://julestonolo-artisanduweb.fr/demos/biskit/'
                 },
+                {
+                    id:"3",
+                    title: "Carologie",
+                    category: "Site web",
+                    labels:[
+                        'PHP',
+                        'Bootstrap'
+                    ],
+                    description: "J'ai réalisé ce projet en août 2019 lors d'un hackaton qui se déroulait dans l'incubateur RimbaudTech à Charleville-Mézières. L'objectif du concours était d'utiliser une base de données construite à partir d'études démographiques et historiques de Charleville, effectuées par les chercheurs du CNRS de la Sorbonne à Paris, pour créer un site ou une application originale. Nous avons donc proposé Carologie qui est un projet de site internet accessible sur tout support permettant de savoir qui habitait à l'adresse que vous renseignez à la période que vous sélectionnez. Elle donne également des stastistiques sur les voisins et les gens du quartier à la même époque. Le projet est arrivé en 2ème position.",
+                    image:[
+                        "carologie.png"
+                    ],
+                    color:'red',
+                    link:'http://julestonolo-artisanduweb.fr/demos/carologie/',
+                },
+                
                 {
                     id:"4",
                     title: "Étoile Champenoise",
                     category: "Site web / Web app",
                     labels:[
                         'PHP',
-                        'Bootsrap'
+                        'Bootstrap'
                     ],
                     description: "Ce projet a été réalisé pour l'entreprise l'Etoile Champenoise basée à Donchery. L'objectif initial était de refaire la partie front-end d'une application interne à l'entreprise permettant d'obtenir facilement et rapidement des informations relatives aux colis ou aux partenaires de l'entreprise. Nous avons d'abord recréé entièrement la partie front-end du site en utilisant Bootstrap puis nous avons refait nous-même toute la partie back-end, en PHP et MySql pour la base de données, car cela nous semblait moins long que d'essayer d'intégrer la version déjà existante qui n'était pas commentée et difficile de compréhension. A la demande de la société nous avons également ajouté des fonctionalités : une interface permettant de gérer des messages journaliers et mensuels directement depuis le site et nous avons créer une page d'accueil visible par tous sans nécessité de connexion en guise de site vitrine de l'entreprise.",
-                    tasks:[
-                        "Développement d'une page vitrine",
-                        "Développement sous PHP - MySQL",
-                        "Interface d'administration",
-                    ],
                     image:[
                         "etoilechamp.png"
                     ],
                     color:'blue',
-                    
+                    link:'http://www.etoilechampenoise.fr/',
+                },
+                 {
+                    id:"5",
+                    title: "Calendrier interactif",
+                    category: "Web app",
+                    labels:[
+                        'PHP',
+                        'Bootstrap'
+                    ],
+                    description: "Le projet s'est déroulé en juillet 2019 lors d'un stage pour une entreprise de location de salles. L'objectif était de créer un site accessible uniquement par le personel de la société qui leur permettrait de gérer leurs réservations et les informations des clients via un calendrier interactif. J'ai utilisé Bootstrap, MySQL pour la base de données, PHP pour la création du calendrier et la gestion coté back-end et Jquerry pour les modales.",
+            
+                    image:[
+                        "75avenue.png"
+                    ],
+                    color:'orange',
+                    link:'http://julestonolo-artisanduweb.fr/demos/calendrier/',
                 },
             ]
         }

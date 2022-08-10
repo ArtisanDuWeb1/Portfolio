@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="dark z-0" :class="{'h' : modal}">
+  <div id="app" class="dark z-0 w-full overflow-hidden" :class="{'h' : modal}">
     <NavBar/>
     <Slider/>
     <component :is="currentTab"></component>

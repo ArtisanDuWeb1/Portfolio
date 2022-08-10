@@ -7,7 +7,7 @@
             <div class="absolute top-0 right-0 darker w-1/2 h-[30px]  z-30 opacity-100 md:opacity-0"></div>
             <div class="img-contact grayscale w-full h-full"></div>
         </div>
-        <div class="w-full md:w-1/2 darker decale  px-8 sm:px-12 py-[110px] lg:py-[120px] xl:py-[130px] lg:px-[80px] xl:px-[130px]">
+        <div class="w-full md:w-1/2 darker decale  px-8 sm:px-12 py-[110px] lg:py-[80px] xl:py-[130px] lg:px-[60px] xl:px-[130px]">
             <div class="absolute bottom-0 left-0 darkest w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
             <mainTitle title="Contactez-moi" class="mb-16" titleClass="text-dark" align="mix"/>
             <div class="flex justify-center md:justify-start flex-wrap flex-col">
@@ -48,15 +48,12 @@
                     </div>
                 </div>
                 <div class="flex mt-16 text-4xl text-gray-300 justify-center md:justify-start">
-                    <div class="mr-5">
+                    <a href="https://github.com/ArtisanDuWeb1" target="_blank" class="mr-5">
                         <i class="fab fa-github-square  hover:scale-125 opacity-75 hover:opacity-100 transition-all easy-in"></i>
-                    </div>
-                    <div class="mr-5">
+                    </a>
+                    <a href="https://www.linkedin.com/in/jules-tonolo-646693185/" target="_blank" class="mr-5">
                         <i class="fab fa-linkedin hover:scale-125 opacity-75 hover:opacity-100 transition-all easy-in"></i>
-                    </div>
-                    <div class="mr-5">
-                        <i class="fab fa-behance-square hover:scale-125 opacity-75 hover:opacity-100 transition-all easy-in"></i>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -69,10 +66,10 @@
                 </span>
             </h2>
             <div class="lg:mt-0 lg:flex-shrink-0">
-                <div class="mt-8 inline-flex rounded-md shadow">
-                  <div @click="$parent.swapToComponent('portfolio')">
-                    <MainButton color="dark" colorText="text-black" text="Me contacter"/>
-                  </div>
+                <div class="mt-8 inline-flex rounded-md ">
+                  <a href="mailto:tonolo.jules@gmail.com">
+                    <MainButton color="dark" colorText="text-black dark" text="Me contacter"/>
+                  </a>
                 </div>
             </div>
         </div>

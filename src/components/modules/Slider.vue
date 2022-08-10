@@ -2,11 +2,11 @@
     <div id="slider" class="h-screen w-full relative overflow-hidden">
         <div class="absolute lg:-left-[80px] md:-left-[105px] w-full md:w-auto top-[120px] md:top-auto md:bottom-[170px] animate__animated animate__fadeInLeft animate__delay-5s z-30 flex md:block justify-center">
             <div class="flex -rotate-0 md:-rotate-90 ">
-                <div class="flex text-gray-400">
+                <div class="flex text-gray-400" :class="[$parent.currentTab == 'home' ? 'inline' : 'hidden md:flex']">
                     <div class="h-8 w-8 md:w-12 md:h-12 darker flex items-center justify-center rounded-full">
                         <i class="fas fa-code-branch"></i>
                     </div>
-                    <div class="my-auto  ml-2 md:ml-3 text-md md:text-xl text-gray-300 relative ">
+                    <div class="my-auto  ml-2 md:ml-3 text-md md:text-xl text-gray-300 relative" >
                         <a :href="commitLink" target="_blank" class="font-bold cursor-pointer commit_link">Dernier commit</a> : {{lastCommit}}
                     </div>
                 </div>
@@ -22,16 +22,13 @@
             
         </div>
         <kinesis-container id="header-text" class="w-full h-full relative flex justify-center items-center">
-            <kinesis-element tag="div" :strength="8" id="banner" originX="50" class="w-full h-full absolute opacity-20 mx-auto" type="translate">
-                
-            </kinesis-element>
-            
-            <kinesis-element :strength="14" originX="50"  class="relative flex w-full justify-center h-full items-center z-20" type="translate">
+  
+            <kinesis-element :strength="8" :originX="0"  class="relative flex w-full justify-center h-full items-center z-20" type="translate">
                 <div class=" mx-auto  px-8">
                     <h1 id="header-subtitle" v-html="subtitles[getTabIndex]" class="opacity-0 text-4xl lg:text-5xl xl:text-6xl text-white text-shadow text-left md:text-center animate__delay-4s"></h1>
                 </div>
             </kinesis-element>
-            <kinesis-element :strength="10" id="swapper-title"  class="bebas text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[16rem] absolute font-bold leading-[7rem] md:leading-[12rem] lg:leading-[14rem] xl:leading-[16rem] z-10 text-darker my-auto" type="translate">
+            <kinesis-element :strength="5" :originX="5" id="swapper-title"  class="bebas text-[6rem] md:text-[9rem] xl:text-[16rem] absolute font-bold leading-[7rem] md:leading-[12rem] lg:leading-[14rem] xl:leading-[16rem] z-10 text-darker my-auto" type="translate">
                     <div id="header-title-1" class="relative text-left">
                         <div id="header-cover-title-1" v-html="titles1[getTabIndex]" class="absolute darkest  text-transparent opacity-100">
                         </div>   
@@ -144,6 +141,11 @@ export default {
 .button-scroll:hover{
     color:#5a832f;
 }
+
+.border-b-secondary{
+    border-bottom-color:#5a832f;
+}
+
 
 @media (max-width: 320px) {
     #swapper-title{

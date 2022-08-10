@@ -1,7 +1,7 @@
 <template>
     <div id="competences" class="w-full z-20 relative pt-16">
         <div class="flex flex-wrap justify-center relative">
-            <div class="absolute w-[1px] h-[80px] md:h-[200px] darker -top-[30px] md:-mt-10 z-20  left-[50%]"></div>
+            <div class="absolute w-[1px] h-[80px] md:h-[200px] darker -top-[30px] md:-mt-10 z-20  left-[50%] hidden md:block"></div>
             
             <div class="w-full md:w-1/2 darkest py-[80px] md:py-[100px] lg:py-[120px]">
                 <div class="absolute top-0 left-0 darkest w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>

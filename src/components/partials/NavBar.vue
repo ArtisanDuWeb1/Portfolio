@@ -12,26 +12,28 @@
                     <div :class="{'h-screen' : menu}" class="hidden md:flex text-gray-400 uppercase text-lg  justify-center font-semibold">
                         <div @click="$parent.swapToComponent('home')" class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
                             Accueil
-                            <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'home'}"></div>
+                            <div class="absolute h-[2px] w-0 rounded-full secondary mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'home'}"></div>
                         </div>
                         <div @click="$parent.swapToComponent('about')"  class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
                             à propos
-                            <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'about'}"></div>
+                            <div class="absolute h-[2px] w-0 rounded-full secondary mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'about'}"></div>
                         </div>
                         <div @click="$parent.swapToComponent('portfolio')" class="group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
                             Portfolio
-                            <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'portfolio'}"></div>
+                            <div class="absolute h-[2px] w-0 rounded-full secondary mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'portfolio'}"></div>
                         </div>
                         <div @click="$parent.swapToComponent('contact')" class="pl-4 pr-0 xl:pr-4 group px-4 h-full flex items-center border-white hover:font-bold cursor-pointer justify-center hover:text-white transition-all easy-in">
                             Contact
-                            <div class="absolute h-[2px] w-0 rounded-full bg-gray-400 mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'contact'}"></div>
+                            <div class="absolute h-[2px] w-0 rounded-full secondary mt-9 transition-all easy-in group-hover:w-20 group-hover:bg-white duration-700 text-transparent" :class="{'w-5' : $parent.currentTab == 'contact'}"></div>
                         </div>
                          
                     </div>
                     <div class="flex">
-                        <div class="flex items-center my-auto mr-3 md:mr-0">
-                            <button type="button" class="uppercase text-dark hover:text-black secondary focus:ring-4 font-bold rounded-full text-md  text-center hover:scale-110 transition-all easy-in  w-[43px] h-[43px]"><i class="fas fa-envelope"></i></button>
-                        </div>
+                        <a href="mailto:tonolo.jules@gmail.com" class="flex items-center my-auto mr-3 md:mr-0">
+                            <div class="uppercase text-dark hover:text-black secondary flex items-center justify-center font-bold rounded-full text-md  text-center hover:scale-110 transition-all easy-in  w-[43px] h-[43px]">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </a>
                         <div class="my-auto flex md:hidden">
                             <button class="relative group "  @click="switchMenu()">
                                 <div class="relative flex overflow-hidden items-center justify-center rounded-full w-[43px] h-[43px] transform transition-all bg-gray-300 ring-0 ring-gray-300 hover:ring-8 group-focus:ring-4 ring-opacity-30 duration-200 shadow-md">
@@ -117,7 +119,7 @@ export default {
 </script>
 
 <style>
-    .bg-2{
-        background-color:rgba(0, 0, 0, 0.247);
+    .secondary{
+        background-color: #5a832f;
     }
 </style>

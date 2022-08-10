@@ -7,7 +7,7 @@
         <div class="absolute top-0 right-0 darker w-1/2 h-[30px] z-30 opacity-100 md:opacity-0"></div>
         <div class="absolute bottom-0 dark w-1/2 h-[30px] z-30 opacity-100 md:opacity-0"></div>
       </div>
-      <div class="w-full md:w-1/2 darker decale px-8 sm:px-12 py-[80px] lg:py-[140px] xl:py-[180px] lg:px-[80px] xl:px-[130px]">
+      <div class="w-full md:w-1/2 darker decale px-8 sm:px-12 py-[90px] xl:py-[150px] lg:px-[60px] xl:px-[100px]">
         <div class="absolute top-0 left-0 darker w-1/2 h-[30px] -mt-[30px] z-30 opacity-100 md:opacity-0"></div>
         <mainTitle class="text-left" title="Qui suis-je ?" titleClass="text-dark" subtitle="En savoir plus sur l'artisan du web" /> 
         <p class="text-left mt-12 text-gray-400  xl:text-lg text-md md:text-sm">
@@ -23,7 +23,7 @@
         </p>
         <div class="mt-12">
           <div @click="$parent.scrollTo('services')">
-            <Button color="dark" colorText="text-darkest" text="En savoir plus"/>
+            <mainButton color="dark" colorText="text-darkest" text="En savoir plus"/>
           </div>
         </div>
       </div>     
@@ -40,12 +40,12 @@
                     C'est par ici que ca se passe.
                 </span>
             </h2>
-            <div class="lg:mt-0 lg:flex-shrink-0">
-                <div class="mt-8 inline-flex rounded-md shadow">
-                  <div @click="$parent.swapToComponent('portfolio')">
-                    <Button color="dark" colorText="text-black" text="voir les projets"/>
-                  </div>
-                </div>
+        </div>
+        <div class="lg:mt-0 lg:flex-shrink-0">
+            <div class="mt-8 inline-flex rounded-md ">
+              <a @click="$parent.swapToComponent('portfolio')">
+                <mainButton color="dark" colorText="text-black dark" text="Voir les projets"/>
+              </a>
             </div>
         </div>
     </div>
@@ -56,12 +56,12 @@
 import mainTitle from '../partials/Titre.vue'
 import Services from '../modules/Services.vue'
 import Competences from '../modules/Compétences.vue'
-import Button from '../partials/Button.vue'
+import mainButton from '../partials/Button.vue'
 export default {
     name:"About",
     components:{
         mainTitle,
-        Button,
+        mainButton,
         Competences,
         Services,
     }
